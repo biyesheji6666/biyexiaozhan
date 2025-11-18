@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕业设计辅导服务 - 演示文稿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .card-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .card .features {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5f7fa;
+            border-radius: 10px;
+        }
+
+        .card .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card .features li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .card .features li:before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+
+        .button {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 18px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .card.business h2 {
+            color: #1e3c72;
+        }
+
+        .card.business .button {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.4);
+        }
+
+        .card.business .button:hover {
+            box-shadow: 0 6px 25px rgba(30, 60, 114, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        .footer p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 30px;
+            }
+            
+            .card h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💼 毕业设计辅导服务</h1>
+            <p>专业 · 高效 · 保障</p>
+        </div>
+
+        <div class="cards">
+            <!-- 客户版卡片 -->
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h2>客户版演示</h2>
+                <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
+                
+                <div class="features">
+                    <ul>
+                        <li>服务套餐详细介绍</li>
+                        <li>优惠活动与定价</li>
+                        <li>成功案例展示</li>
+                        <li>常见问题解答</li>
+                        <li>联系方式与报名流程</li>
+                    </ul>
+                </div>
+                
+                <a href="客户版-毕业设计辅导服务介绍.html" class="button">
+                    查看客户版演示 →
+                </a>
+            </div>
+
+            <!-- 内部版卡片 -->
+            <div class="card business">
+                <div class="card-icon">📊</div>
+                <h2>内部汇报版</h2>
+                <p>面向公司管理层的项目汇报，完整的商业计划和财务分析</p>
+                
+                <div class="features">
+                    <ul>
+                        <li>市场分析与竞争优势</li>
+                        <li>服务体系设计</li>
+                        <li>财务预测与投资回报</li>
+                        <li>风险控制策略</li>
+                        <li>发展规划路线图</li>
+                    </ul>
+                </div>
+                
+                <a href="内部汇报-毕业设计辅导项目.html" class="button">
+                    查看内部汇报版 →
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💡 提示：演示支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮</p>
+            <p>📱 移动设备支持左右滑动切换页面</p>
+            <p style="margin-top: 20px; font-size: 14px;">© 2025 毕业设计辅导服务 | 所有权利保留</p>
+        </div>
+    </div>
+</body>
+</html>
+
