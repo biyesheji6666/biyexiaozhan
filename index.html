@@ -50,6 +50,67 @@
             margin-bottom: 40px;
         }
 
+        .device-selector {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .device-selector h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .device-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .device-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .device-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .version-links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .version-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #f5f7fa;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .version-link:hover {
+            background: #667eea;
+            color: white;
+        }
+
         .card {
             background: white;
             border-radius: 20px;
@@ -177,7 +238,20 @@
             <p>专业 · 高效 · 保障</p>
         </div>
 
-        <div class="cards">
+        <div class="device-selector">
+            <h3>📱 选择您的设备类型</h3>
+            <p style="color: #666; margin-bottom: 15px;">为您提供最佳浏览体验</p>
+            <div class="device-buttons">
+                <button class="device-btn" onclick="showDesktop()">🖥️ 电脑端（桌面版）</button>
+                <button class="device-btn" onclick="showMobile()">📱 手机端（移动版）</button>
+            </div>
+            <p style="color: #999; font-size: 14px; margin-top: 15px;">
+                桌面版：翻页式演示，适合演讲展示<br>
+                移动版：垂直滚动，适合手机浏览
+            </p>
+        </div>
+
+        <div class="cards" id="desktop-cards">
             <!-- 客户版卡片 -->
             <div class="card">
                 <div class="card-icon">🎓</div>
@@ -197,9 +271,10 @@
                 <a href="客户版-毕业设计辅导服务介绍.html" class="button">
                     查看客户版演示 →
                 </a>
-                <p style="margin-top: 15px; text-align: center; color: #999; font-size: 14px;">
-                    备用链接：<a href="client-presentation.html" style="color: #667eea;">client-presentation.html</a>
-                </p>
+                <div class="version-links">
+                    <a href="客户版-毕业设计辅导服务介绍.html" class="version-link">🖥️ 桌面版</a>
+                    <a href="mobile-client.html" class="version-link">📱 手机版</a>
+                </div>
             </div>
 
             <!-- 内部版卡片 -->
@@ -221,18 +296,86 @@
                 <a href="内部汇报-毕业设计辅导项目.html" class="button">
                     查看内部汇报版 →
                 </a>
-                <p style="margin-top: 15px; text-align: center; color: #999; font-size: 14px;">
-                    备用链接：<a href="internal-presentation.html" style="color: #1e3c72;">internal-presentation.html</a>
-                </p>
+                <div class="version-links">
+                    <a href="内部汇报-毕业设计辅导项目.html" class="version-link">🖥️ 桌面版</a>
+                    <a href="mobile-internal.html" class="version-link">📱 手机版</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards" id="mobile-cards" style="display: none;">
+            <!-- 客户版卡片 - 手机版 -->
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h2>客户版演示（手机版）</h2>
+                <p>专为手机优化的垂直滚动页面，触摸友好，方便随时查看</p>
+                
+                <div class="features">
+                    <ul>
+                        <li>✅ 大字体易读</li>
+                        <li>✅ 垂直滚动浏览</li>
+                        <li>✅ 触摸优化</li>
+                        <li>✅ 快速加载</li>
+                        <li>✅ 一键返回顶部</li>
+                    </ul>
+                </div>
+                
+                <a href="mobile-client.html" class="button">
+                    查看手机版客户演示 →
+                </a>
+            </div>
+
+            <!-- 内部版卡片 - 手机版 -->
+            <div class="card business">
+                <div class="card-icon">📊</div>
+                <h2>内部汇报版（手机版）</h2>
+                <p>手机优化版内部汇报，随时随地查看项目数据和分析</p>
+                
+                <div class="features">
+                    <ul>
+                        <li>✅ 精简图表</li>
+                        <li>✅ 数据可视化</li>
+                        <li>✅ 快速导航</li>
+                        <li>✅ 离线查看</li>
+                        <li>✅ 机密保护</li>
+                    </ul>
+                </div>
+                
+                <a href="mobile-internal.html" class="button">
+                    查看手机版内部汇报 →
+                </a>
             </div>
         </div>
 
         <div class="footer">
-            <p>💡 提示：演示支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮</p>
-            <p>📱 移动设备支持左右滑动切换页面</p>
+            <p id="footer-tip">💡 提示：演示支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮</p>
             <p style="margin-top: 20px; font-size: 14px;">© 2025 毕业设计辅导服务 | 所有权利保留</p>
         </div>
     </div>
+
+    <script>
+        function showDesktop() {
+            document.getElementById('desktop-cards').style.display = 'grid';
+            document.getElementById('mobile-cards').style.display = 'none';
+            document.getElementById('footer-tip').innerHTML = '💡 提示：桌面版支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮';
+        }
+
+        function showMobile() {
+            document.getElementById('desktop-cards').style.display = 'none';
+            document.getElementById('mobile-cards').style.display = 'grid';
+            document.getElementById('footer-tip').innerHTML = '📱 提示：手机版采用垂直滚动方式，支持触摸友好操作和一键返回顶部';
+        }
+
+        // 自动检测设备类型
+        window.onload = function() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                showMobile();
+            } else {
+                showDesktop();
+            }
+        };
+    </script>
 </body>
 </html>
 

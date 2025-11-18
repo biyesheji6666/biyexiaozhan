@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>毕业设计辅导服务 - 客户版（手机版）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 10px;
+            padding: 20px 15px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 20px;
+            margin: 15px 0 10px 0;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 18px;
+            margin: 12px 0 8px 0;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 18px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+            overflow-x: auto;
+            display: block;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            font-size: 13px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .highlight h3, .highlight p {
+            color: white;
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .back-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+
+        .metric-value {
+            font-size: 28px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #666;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 返回顶部 -->
+    <a href="#top" class="back-top">↑</a>
+
+    <!-- 导航 -->
+    <div class="nav">
+        <a href="index.html">← 返回首页</a> | 
+        <a href="#packages">查看套餐</a> | 
+        <a href="#contact">联系我们</a>
+    </div>
+
+    <!-- 封面 -->
+    <div class="header" id="top">
+        <h1>🎓 毕业设计辅导服务</h1>
+        <p>让您的毕业设计无忧通关</p>
+        <p style="margin-top: 10px; font-size: 18px;">专业 · 高效 · 保障</p>
+    </div>
+
+    <!-- 关于我们 -->
+    <div class="section">
+        <h2>🎯 关于我们</h2>
+        <p><strong>专注于计算机专业毕业设计辅导的专业服务团队</strong></p>
+        <ul>
+            <li>✅ <strong>资深导师团队</strong>：5年+项目经验，精通各类技术栈</li>
+            <li>✅ <strong>系统化服务</strong>：从选题到答辩，全流程专业指导</li>
+            <li>✅ <strong>通过率保障</strong>：标准套餐及以上承诺答辩通过</li>
+            <li>✅ <strong>贴心服务</strong>：一对一指导，随时答疑解惑</li>
+        </ul>
+    </div>
+
+    <!-- 学员痛点 -->
+    <div class="section">
+        <h2>😰 您是否遇到这些困扰？</h2>
+        
+        <div class="card">
+            <h4>❌ 技术问题</h4>
+            <ul>
+                <li>技术栈不知如何选择</li>
+                <li>代码写不出来，Bug调不好</li>
+                <li>系统架构不会设计</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>❌ 项目问题</h4>
+            <ul>
+                <li>不知道做什么项目好</li>
+                <li>功能太多无从下手</li>
+                <li>项目进度严重拖延</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>❌ 论文问题</h4>
+            <ul>
+                <li>论文不知从何写起</li>
+                <li>格式总是不符合要求</li>
+                <li>查重率过高</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>❌ 答辩问题</h4>
+            <ul>
+                <li>答辩PPT不会做</li>
+                <li>不知道老师会问什么</li>
+                <li>担心无法通过</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; color: #27ae60; font-size: 18px; font-weight: bold; margin-top: 20px;">
+            ✅ 别担心，我们来帮您解决！
+        </p>
+    </div>
+
+    <!-- 服务方向 -->
+    <div class="section">
+        <h2>🔧 我们支持的技术方向</h2>
+        
+        <div class="card">
+            <h3>🌐 Web开发方向</h3>
+            <p><strong>前端：</strong>React / Vue / Angular</p>
+            <p><strong>后端：</strong>Spring Boot / Node.js / Django</p>
+            <p><strong>适用：</strong>管理系统、电商平台、社交网站</p>
+        </div>
+
+        <div class="card">
+            <h3>📱 移动应用开发</h3>
+            <p><strong>技术：</strong>Android / iOS / Flutter</p>
+            <p><strong>适用：</strong>移动APP、混合应用、小程序</p>
+        </div>
+
+        <div class="card">
+            <h3>🤖 人工智能/机器学习</h3>
+            <p><strong>技术：</strong>Python / TensorFlow / PyTorch</p>
+            <p><strong>适用：</strong>图像识别、NLP、推荐系统</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 大数据/云计算</h3>
+            <p><strong>技术：</strong>Hadoop / Spark / Docker</p>
+            <p><strong>适用：</strong>数据分析、实时处理、云服务</p>
+        </div>
+
+        <div class="card">
+            <h3>🎮 游戏开发</h3>
+            <p><strong>技术：</strong>Unity / Unreal Engine</p>
+            <p><strong>适用：</strong>2D/3D游戏、休闲小游戏</p>
+        </div>
+    </div>
+
+    <!-- 服务套餐 -->
+    <div class="section" id="packages">
+        <h2>💼 服务套餐</h2>
+
+        <!-- 基础套餐 -->
+        <div class="card" style="border-left-color: #3498db;">
+            <h3>🔵 基础套餐 - "启航版"</h3>
+            <div class="price-box">
+                <div class="old-price">原价 ¥2,980</div>
+                <div class="price">¥2,580</div>
+                <span class="badge">早鸟价</span>
+            </div>
+            <p><strong>适合：</strong>有一定编程基础，主要需要方向指导</p>
+            <h4>服务内容：</h4>
+            <ul>
+                <li>需求分析与选题指导 (2次)</li>
+                <li>技术方案设计指导 (1次)</li>
+                <li>开发环境搭建指导</li>
+                <li>在线文字答疑 (3个月)</li>
+                <li>项目模板代码</li>
+                <li>技术文档资料包</li>
+            </ul>
+            <p><strong>⏰ 服务周期：</strong>3个月</p>
+        </div>
+
+        <!-- 标准套餐 -->
+        <div class="card" style="border-left-color: #27ae60;">
+            <h3>🟢 标准套餐 - "护航版" ⭐</h3>
+            <div class="price-box">
+                <div class="old-price">原价 ¥5,980</div>
+                <div class="price">¥4,980</div>
+                <span class="badge">早鸟价</span>
+                <span class="badge">最受欢迎</span>
+            </div>
+            <p><strong>适合：</strong>希望得到全程系统化指导</p>
+            <h4>包含基础套餐全部内容，另增加：</h4>
+            <ul>
+                <li>全程项目辅导 (10次一对一)</li>
+                <li>代码审查服务 (3次)</li>
+                <li>数据库设计指导 (2次)</li>
+                <li>毕业论文指导 (3次)</li>
+                <li>答辩准备辅导</li>
+                <li>增强答疑 (24小时内响应)</li>
+                <li><strong>🎖️ 答辩通过保障</strong></li>
+            </ul>
+            <p><strong>⏰ 服务周期：</strong>4个月</p>
+        </div>
+
+        <!-- 高级套餐 -->
+        <div class="card" style="border-left-color: #f39c12;">
+            <h3>🟡 高级套餐 - "领航版"</h3>
+            <div class="price-box">
+                <div class="old-price">原价 ¥9,980</div>
+                <div class="price">¥8,580</div>
+                <span class="badge">早鸟价</span>
+            </div>
+            <p><strong>适合：</strong>希望获得最高质量服务</p>
+            <h4>包含标准套餐全部内容，另增加：</h4>
+            <ul>
+                <li>专属导师 (15次深度指导)</li>
+                <li>核心代码开发支持</li>
+                <li>完整代码审查 (5次)</li>
+                <li>项目部署上线指导</li>
+                <li>论文深度辅导 (5次)</li>
+                <li>VIP答疑 (12小时内响应)</li>
+                <li><strong>🎖️ 答辩通过保障</strong></li>
+            </ul>
+            <p><strong>⏰ 服务周期：</strong>5个月</p>
+        </div>
+
+        <!-- 尊享套餐 -->
+        <div class="card" style="border-left-color: #e74c3c;">
+            <h3>💎 尊享套餐 - "卓越版"</h3>
+            <div class="price-box" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="old-price">原价 ¥15,800</div>
+                <div class="price">¥13,800</div>
+                <span class="badge">早鸟价</span>
+                <span class="badge">顶级服务</span>
+            </div>
+            <p><strong>适合：</strong>对项目要求极高</p>
+            <h4>包含高级套餐全部内容，另增加：</h4>
+            <ul>
+                <li>深度定制服务 (20次+)</li>
+                <li>项目实战开发</li>
+                <li>无限次代码审查</li>
+                <li>论文全程润色</li>
+                <li>答辩全程陪护</li>
+                <li><strong>🎖️ 答辩通过保障</strong></li>
+            </ul>
+            <p><strong>⏰ 服务周期：</strong>6个月</p>
+        </div>
+    </div>
+
+    <!-- 套餐对比 -->
+    <div class="section">
+        <h2>📊 套餐对比</h2>
+        <p style="color: #666; margin-bottom: 15px;">向左滑动查看更多 →</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>服务项目</th>
+                    <th>基础版</th>
+                    <th>标准版⭐</th>
+                    <th>高级版</th>
+                    <th>尊享版</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>价格</strong></td>
+                    <td>¥2,580</td>
+                    <td>¥4,980</td>
+                    <td>¥8,580</td>
+                    <td>¥13,800</td>
+                </tr>
+                <tr>
+                    <td>一对一指导</td>
+                    <td>❌</td>
+                    <td>10次</td>
+                    <td>15次</td>
+                    <td>20次+</td>
+                </tr>
+                <tr>
+                    <td>代码审查</td>
+                    <td>❌</td>
+                    <td>3次</td>
+                    <td>5次</td>
+                    <td>无限</td>
+                </tr>
+                <tr>
+                    <td>论文指导</td>
+                    <td>指南</td>
+                    <td>3次</td>
+                    <td>5次</td>
+                    <td>全程</td>
+                </tr>
+                <tr>
+                    <td><strong>答辩保障</strong></td>
+                    <td>❌</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                    <td>✅</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="text-align: center; margin-top: 15px; color: #667eea;">
+            <strong>💡 建议：80%的学员选择标准版或高级版</strong>
+        </p>
+    </div>
+
+    <!-- 优惠活动 -->
+    <div class="section">
+        <h2>💰 优惠活动</h2>
+        
+        <div class="highlight">
+            <h3>🎁 早鸟优惠</h3>
+            <p style="font-size: 18px;">提前报名享受特惠价<br>最高可省¥2,000</p>
+        </div>
+
+        <div class="card">
+            <h4>👥 团购优惠</h4>
+            <ul>
+                <li>3人团：每人减¥300</li>
+                <li>5人团：每人减¥500</li>
+                <li>10人团：每人减¥800</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>🎉 推荐奖励</h4>
+            <ul>
+                <li>推荐成功：奖励¥500</li>
+                <li>被推荐：优惠¥300</li>
+                <li>推荐3人+：再奖¥1,000</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h3>💡 省钱示例</h3>
+            <p>标准套餐：原价¥5,980</p>
+            <p>→ 早鸟价¥4,980 (-¥1,000)</p>
+            <p>→ 5人团-¥500</p>
+            <p>→ 全款优惠-5%</p>
+            <p style="font-size: 28px; margin-top: 10px;"><strong>= ¥4,256</strong></p>
+            <p>共省¥1,724！</p>
+        </div>
+    </div>
+
+    <!-- 服务保障 -->
+    <div class="section">
+        <h2>🏅 服务保障</h2>
+        
+        <div class="card">
+            <h4>✅ 质量保障</h4>
+            <ul>
+                <li>导师资质：5年+经验</li>
+                <li>答辩通过：标准版及以上承诺</li>
+                <li>未通过：免费继续辅导2个月</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>✅ 隐私保护</h4>
+            <ul>
+                <li>签订正式保密协议</li>
+                <li>代码和论文严格保密</li>
+                <li>不用于其他用途</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h4>✅ 服务保障</h4>
+            <ul>
+                <li>最快12小时响应</li>
+                <li>不满意可更换导师</li>
+                <li>24小时内处理投诉</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 成功案例 -->
+    <div class="section">
+        <h2>🎉 成功案例</h2>
+        
+        <div class="grid-2" style="margin-bottom: 20px;">
+            <div class="metric">
+                <div class="metric-value">500+</div>
+                <div class="metric-label">服务学员</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">98%</div>
+                <div class="metric-label">通过率</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">95%</div>
+                <div class="metric-label">满意度</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">85%</div>
+                <div class="metric-label">推荐率</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4>案例1：Web管理系统</h4>
+            <p><strong>张同学</strong> | 某985高校</p>
+            <p>标准套餐 | Spring Boot教务系统</p>
+            <p class="quote">"导师非常专业，代码审查很细致，学到很多东西"</p>
+            <p style="color: #27ae60;"><strong>结果：答辩优秀 ⭐⭐⭐⭐⭐</strong></p>
+        </div>
+
+        <div class="card">
+            <h4>案例2：AI图像识别</h4>
+            <p><strong>李同学</strong> | 某211高校</p>
+            <p>高级套餐 | 车牌识别系统</p>
+            <p class="quote">"技术难度大，多亏导师耐心指导"</p>
+            <p style="color: #27ae60;"><strong>结果：答辩良好 ⭐⭐⭐⭐</strong></p>
+        </div>
+
+        <div class="card">
+            <h4>案例3：移动电商APP</h4>
+            <p><strong>王同学</strong> | 某普通本科</p>
+            <p>标准套餐 | Flutter电商应用</p>
+            <p class="quote">"从零开始学，导师手把手教"</p>
+            <p style="color: #27ae60;"><strong>结果：答辩通过 ⭐⭐⭐⭐</strong></p>
+        </div>
+    </div>
+
+    <!-- 常见问题 -->
+    <div class="section">
+        <h2>❓ 常见问题</h2>
+        
+        <div class="card">
+            <h4>Q1: 你们的服务是代做吗？</h4>
+            <p><strong>A:</strong> 不是。我们提供辅导服务，导师教您如何做，代码需要您自己写。</p>
+        </div>
+
+        <div class="card">
+            <h4>Q2: 如果答辩没通过怎么办？</h4>
+            <p><strong>A:</strong> 标准套餐及以上承诺通过。没通过会免费继续指导直到通过（最多延长2个月）。</p>
+        </div>
+
+        <div class="card">
+            <h4>Q3: 导师靠谱吗？</h4>
+            <p><strong>A:</strong> 导师都是5年以上开发经验的专业人士，经过严格筛选和培训。</p>
+        </div>
+
+        <div class="card">
+            <h4>Q4: 可以换导师吗？</h4>
+            <p><strong>A:</strong> 可以。如果对导师不满意，可以申请更换。</p>
+        </div>
+
+        <div class="card">
+            <h4>Q5: 什么时候报名最合适？</h4>
+            <p><strong>A:</strong> 建议提前3-6个月报名。越早开始，时间越充裕，效果越好。</p>
+        </div>
+    </div>
+
+    <!-- 报名流程 -->
+    <div class="section">
+        <h2>📝 报名流程</h2>
+        
+        <div class="card" style="text-align: center;">
+            <h3 style="color: #667eea;">1️⃣ 咨询了解</h3>
+            <p>联系客服，描述需求<br>推荐合适套餐<br>免费试听30分钟</p>
+        </div>
+
+        <div style="text-align: center; font-size: 24px; color: #667eea; margin: 15px 0;">↓</div>
+
+        <div class="card" style="text-align: center;">
+            <h3 style="color: #667eea;">2️⃣ 签约付费</h3>
+            <p>确定服务套餐<br>签订服务合同<br>支付服务费用<br>匹配专属导师</p>
+        </div>
+
+        <div style="text-align: center; font-size: 24px; color: #667eea; margin: 15px 0;">↓</div>
+
+        <div class="card" style="text-align: center;">
+            <h3 style="color: #667eea;">3️⃣ 开始服务</h3>
+            <p>预约辅导时间<br>沟通项目需求<br>正式开始辅导<br>定期跟踪进度</p>
+        </div>
+    </div>
+
+    <!-- 联系我们 -->
+    <div class="section" id="contact">
+        <h2>📞 联系我们</h2>
+        
+        <div class="card">
+            <h4>在线咨询</h4>
+            <p>💬 <strong>微信：</strong>[待补充]</p>
+            <p>💬 <strong>QQ：</strong>[待补充]</p>
+            <p>📱 <strong>电话：</strong>[待补充]</p>
+            <p>🌐 <strong>网站：</strong>[待补充]</p>
+        </div>
+
+        <div class="card">
+            <h4>工作时间</h4>
+            <p>周一至周五: 9:00-21:00</p>
+            <p>周末节假日: 10:00-18:00</p>
+            <p>紧急情况: 24小时在线</p>
+        </div>
+
+        <div class="highlight">
+            <h3>💡 温馨提示</h3>
+            <p>首次咨询请准备好：</p>
+            <p>您的专业和年级 | 毕设方向<br>技术基础 | 答辩时间</p>
+        </div>
+    </div>
+
+    <!-- 立即行动 -->
+    <div class="section">
+        <h2>🎯 立即行动</h2>
+        
+        <div class="highlight">
+            <h3 style="font-size: 24px;">早报名，早安心！</h3>
+            <p style="font-size: 18px; margin-top: 15px;">
+                💰 早鸟特惠 - 最高省¥2,000<br>
+                🎁 新客礼包 - 免费试听<br>
+                👥 团购优惠 - 5人团减¥500/人
+            </p>
+        </div>
+
+        <a href="#contact" class="btn">立即咨询 💬</a>
+
+        <p style="text-align: center; margin-top: 20px; color: #e74c3c; font-size: 18px; font-weight: bold;">
+            ⚠️ 越早准备，时间越充裕，效果越好！
+        </p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <h3 style="color: white; margin-bottom: 15px;">期待与您合作</h3>
+        <p>让毕业设计不再是压力</p>
+        <p>而是展示能力的舞台</p>
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+            © 2025 毕业设计辅导服务 | 所有权利保留
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="客户版-毕业设计辅导服务介绍.html" style="color: #3498db;">切换到桌面版 →</a>
+        </p>
+    </div>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
