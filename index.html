@@ -62,6 +62,7 @@
         .device-selector h3 {
             color: #667eea;
             margin-bottom: 15px;
+            font-size: 22px;
         }
 
         .device-buttons {
@@ -72,20 +73,71 @@
         }
 
         .device-btn {
-            padding: 12px 30px;
-            border-radius: 8px;
-            border: 2px solid #667eea;
+            padding: 15px 35px;
+            border-radius: 10px;
+            border: 3px solid #667eea;
             background: white;
             color: #667eea;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             transition: all 0.3s;
+            min-width: 180px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .device-btn:hover {
             background: #667eea;
             color: white;
             transform: scale(1.05);
+        }
+
+        .device-btn.active {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .device-selector {
+                padding: 25px 15px;
+            }
+
+            .device-selector h3 {
+                font-size: 20px;
+            }
+
+            .device-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .device-btn {
+                width: 100%;
+                min-width: auto;
+                padding: 18px 20px;
+                font-size: 17px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card h2 {
+                font-size: 22px;
+            }
         }
 
         .version-links {
@@ -240,14 +292,20 @@
 
         <div class="device-selector">
             <h3>📱 选择您的设备类型</h3>
-            <p style="color: #666; margin-bottom: 15px;">为您提供最佳浏览体验</p>
+            <p style="color: #666; margin-bottom: 20px; font-size: 15px;">为您提供最佳浏览体验</p>
             <div class="device-buttons">
-                <button class="device-btn" onclick="showDesktop()">🖥️ 电脑端（桌面版）</button>
-                <button class="device-btn" onclick="showMobile()">📱 手机端（移动版）</button>
+                <button class="device-btn" id="desktop-btn" onclick="showDesktop()">
+                    <div style="font-size: 28px; margin-bottom: 5px;">🖥️</div>
+                    电脑端（桌面版）
+                </button>
+                <button class="device-btn" id="mobile-btn" onclick="showMobile()">
+                    <div style="font-size: 28px; margin-bottom: 5px;">📱</div>
+                    手机端（移动版）
+                </button>
             </div>
-            <p style="color: #999; font-size: 14px; margin-top: 15px;">
-                桌面版：翻页式演示，适合演讲展示<br>
-                移动版：垂直滚动，适合手机浏览
+            <p style="color: #999; font-size: 14px; margin-top: 20px; line-height: 1.8;">
+                <strong>桌面版：</strong>翻页式演示，适合演讲展示<br>
+                <strong>移动版：</strong>垂直滚动，适合手机浏览
             </p>
         </div>
 
@@ -358,12 +416,26 @@
             document.getElementById('desktop-cards').style.display = 'grid';
             document.getElementById('mobile-cards').style.display = 'none';
             document.getElementById('footer-tip').innerHTML = '💡 提示：桌面版支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮';
+            
+            // 更新按钮状态
+            document.getElementById('desktop-btn').classList.add('active');
+            document.getElementById('mobile-btn').classList.remove('active');
+            
+            // 平滑滚动到卡片区域
+            document.getElementById('desktop-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         function showMobile() {
             document.getElementById('desktop-cards').style.display = 'none';
             document.getElementById('mobile-cards').style.display = 'grid';
             document.getElementById('footer-tip').innerHTML = '📱 提示：手机版采用垂直滚动方式，支持触摸友好操作和一键返回顶部';
+            
+            // 更新按钮状态
+            document.getElementById('desktop-btn').classList.remove('active');
+            document.getElementById('mobile-btn').classList.add('active');
+            
+            // 平滑滚动到卡片区域
+            document.getElementById('mobile-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         // 自动检测设备类型
