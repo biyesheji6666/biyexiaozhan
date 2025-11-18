@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>毕业设计辅导服务 - 演示文稿</title>
+    <title>毕设小站 毕业设计辅导服务 - 演示文稿</title>
     <style>
         * {
             margin: 0;
@@ -286,7 +286,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>💼 毕业设计辅导服务</h1>
+            <h1>🏠 毕设小站<span style="margin: 0 30px;"></span>毕业设计辅导服务</h1>
             <p>专业 · 高效 · 保障</p>
         </div>
 
@@ -303,10 +303,6 @@
                     手机端（移动版）
                 </button>
             </div>
-            <p style="color: #999; font-size: 14px; margin-top: 20px; line-height: 1.8;">
-                <strong>桌面版：</strong>翻页式演示，适合演讲展示<br>
-                <strong>移动版：</strong>垂直滚动，适合手机浏览
-            </p>
         </div>
 
         <div class="cards" id="desktop-cards">
@@ -322,17 +318,13 @@
                         <li>优惠活动与定价</li>
                         <li>成功案例展示</li>
                         <li>常见问题解答</li>
-                        <li>联系方式与报名流程</li>
+                        <li>联系方式</li>
                     </ul>
                 </div>
                 
                 <a href="客户版-毕业设计辅导服务介绍.html" class="button">
                     查看客户版演示 →
                 </a>
-                <div class="version-links">
-                    <a href="客户版-毕业设计辅导服务介绍.html" class="version-link">🖥️ 桌面版</a>
-                    <a href="mobile-client.html" class="version-link">📱 手机版</a>
-                </div>
             </div>
 
             <!-- 内部版卡片 -->
@@ -351,13 +343,9 @@
                     </ul>
                 </div>
                 
-                <a href="内部汇报-毕业设计辅导项目.html" class="button">
+                <a href="javascript:void(0);" onclick="checkPassword()" class="button">
                     查看内部汇报版 →
                 </a>
-                <div class="version-links">
-                    <a href="内部汇报-毕业设计辅导项目.html" class="version-link">🖥️ 桌面版</a>
-                    <a href="mobile-internal.html" class="version-link">📱 手机版</a>
-                </div>
             </div>
         </div>
 
@@ -365,57 +353,78 @@
             <!-- 客户版卡片 - 手机版 -->
             <div class="card">
                 <div class="card-icon">🎓</div>
-                <h2>客户版演示（手机版）</h2>
-                <p>专为手机优化的垂直滚动页面，触摸友好，方便随时查看</p>
+                <h2>客户版演示</h2>
+                <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
                 
                 <div class="features">
                     <ul>
-                        <li>✅ 大字体易读</li>
-                        <li>✅ 垂直滚动浏览</li>
-                        <li>✅ 触摸优化</li>
-                        <li>✅ 快速加载</li>
-                        <li>✅ 一键返回顶部</li>
+                        <li>服务套餐详细介绍</li>
+                        <li>优惠活动与定价</li>
+                        <li>成功案例展示</li>
+                        <li>常见问题解答</li>
+                        <li>联系方式</li>
                     </ul>
                 </div>
                 
                 <a href="mobile-client.html" class="button">
-                    查看手机版客户演示 →
+                    查看客户版演示 →
                 </a>
             </div>
 
             <!-- 内部版卡片 - 手机版 -->
             <div class="card business">
                 <div class="card-icon">📊</div>
-                <h2>内部汇报版（手机版）</h2>
-                <p>手机优化版内部汇报，随时随地查看项目数据和分析</p>
+                <h2>内部汇报版</h2>
+                <p>面向公司管理层的项目汇报，完整的商业计划和财务分析</p>
                 
                 <div class="features">
                     <ul>
-                        <li>✅ 精简图表</li>
-                        <li>✅ 数据可视化</li>
-                        <li>✅ 快速导航</li>
-                        <li>✅ 离线查看</li>
-                        <li>✅ 机密保护</li>
+                        <li>市场分析与竞争优势</li>
+                        <li>服务体系设计</li>
+                        <li>财务预测与投资回报</li>
+                        <li>风险控制策略</li>
+                        <li>发展规划路线图</li>
                     </ul>
                 </div>
                 
-                <a href="mobile-internal.html" class="button">
-                    查看手机版内部汇报 →
+                <a href="javascript:void(0);" onclick="checkPasswordMobile()" class="button">
+                    查看内部汇报版 →
                 </a>
             </div>
         </div>
 
         <div class="footer">
-            <p id="footer-tip">💡 提示：演示支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮</p>
-            <p style="margin-top: 20px; font-size: 14px;">© 2025 毕业设计辅导服务 | 所有权利保留</p>
+            <p style="font-size: 14px; margin-bottom: 10px;">
+                🔥 总访问量：<span id="visit-count" style="font-weight: bold; color: #ffd700;">0</span> 次
+            </p>
+            <p style="margin-top: 10px; font-size: 14px;">© 毕设小站 | All Rights Reserved</p>
         </div>
     </div>
 
     <script>
+        // 密码验证函数 - 桌面版内部汇报
+        function checkPassword() {
+            const password = prompt('请输入访问密码：');
+            if (password === 'nbnx') {
+                window.location.href = '内部汇报-毕业设计辅导项目.html';
+            } else if (password !== null) {
+                alert('密码错误，无法访问！');
+            }
+        }
+
+        // 密码验证函数 - 手机版内部汇报
+        function checkPasswordMobile() {
+            const password = prompt('请输入访问密码：');
+            if (password === 'nbnx') {
+                window.location.href = 'mobile-internal.html';
+            } else if (password !== null) {
+                alert('密码错误，无法访问！');
+            }
+        }
+
         function showDesktop() {
             document.getElementById('desktop-cards').style.display = 'grid';
             document.getElementById('mobile-cards').style.display = 'none';
-            document.getElementById('footer-tip').innerHTML = '💡 提示：桌面版支持键盘方向键、空格键翻页，也可以用鼠标点击控制按钮';
             
             // 更新按钮状态
             document.getElementById('desktop-btn').classList.add('active');
@@ -428,7 +437,6 @@
         function showMobile() {
             document.getElementById('desktop-cards').style.display = 'none';
             document.getElementById('mobile-cards').style.display = 'grid';
-            document.getElementById('footer-tip').innerHTML = '📱 提示：手机版采用垂直滚动方式，支持触摸友好操作和一键返回顶部';
             
             // 更新按钮状态
             document.getElementById('desktop-btn').classList.remove('active');
@@ -438,8 +446,56 @@
             document.getElementById('mobile-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
+        // 访问量统计功能
+        function updateVisitCount() {
+            // 获取当前访问次数
+            let visitCount = localStorage.getItem('pageVisitCount');
+            
+            // 如果是首次访问，初始化为17123
+            if (visitCount === null) {
+                visitCount = 17123;
+            }
+            
+            // 增加访问次数
+            visitCount = parseInt(visitCount) + 1;
+            
+            // 保存到本地存储
+            localStorage.setItem('pageVisitCount', visitCount);
+            
+            // 显示访问次数
+            document.getElementById('visit-count').textContent = visitCount;
+        }
+
+        // 唯一访客统计功能（每个设备只计数一次）
+        function updateUniqueVisitors() {
+            // 检查该设备是否已经访问过
+            let hasVisited = localStorage.getItem('indexPageVisited');
+            
+            if (!hasVisited) {
+                // 首次访问，增加唯一访客数
+                let uniqueVisitors = localStorage.getItem('uniqueVisitorCount');
+                
+                if (uniqueVisitors === null) {
+                    uniqueVisitors = 0;
+                }
+                
+                uniqueVisitors = parseInt(uniqueVisitors) + 1;
+                
+                // 保存唯一访客数
+                localStorage.setItem('uniqueVisitorCount', uniqueVisitors);
+                
+                // 标记该设备已访问
+                localStorage.setItem('indexPageVisited', 'true');
+            }
+        }
+
         // 自动检测设备类型
         window.onload = function() {
+            // 更新访问统计
+            updateVisitCount();
+            // 更新唯一访客统计
+            updateUniqueVisitors();
+            
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             if (isMobile) {
                 showMobile();
