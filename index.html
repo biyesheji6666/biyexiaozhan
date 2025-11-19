@@ -294,22 +294,22 @@
             <h3>📱 选择您的设备类型</h3>
             <p style="color: #666; margin-bottom: 20px; font-size: 15px;">为您提供最佳浏览体验</p>
             <div class="device-buttons">
-                <button class="device-btn" id="desktop-btn" onclick="showDesktop()">
-                    <div style="font-size: 28px; margin-bottom: 5px;">🖥️</div>
-                    电脑端（桌面版）
-                </button>
                 <button class="device-btn" id="mobile-btn" onclick="showMobile()">
                     <div style="font-size: 28px; margin-bottom: 5px;">📱</div>
                     手机端（移动版）
+                </button>
+                <button class="device-btn" id="desktop-btn" onclick="showDesktop()">
+                    <div style="font-size: 28px; margin-bottom: 5px;">🖥️</div>
+                    电脑端（桌面版）
                 </button>
             </div>
         </div>
 
         <div class="cards" id="desktop-cards">
             <!-- 客户版卡片 -->
-            <div class="card">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
                 <div class="card-icon">🎓</div>
-                <h2>客户版演示</h2>
+                <h2>了解服务</h2>
                 <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
                 
                 <div class="features">
@@ -323,37 +323,16 @@
                 </div>
                 
                 <a href="客户版-毕业设计辅导服务介绍.html" class="button">
-                    查看客户版演示 →
-                </a>
-            </div>
-
-            <!-- 内部版卡片 -->
-            <div class="card business">
-                <div class="card-icon">📊</div>
-                <h2>内部汇报版</h2>
-                <p>面向公司管理层的项目汇报，完整的商业计划和财务分析</p>
-                
-                <div class="features">
-                    <ul>
-                        <li>市场分析与竞争优势</li>
-                        <li>服务体系设计</li>
-                        <li>财务预测与投资回报</li>
-                        <li>风险控制策略</li>
-                        <li>发展规划路线图</li>
-                    </ul>
-                </div>
-                
-                <a href="javascript:void(0);" onclick="checkPassword()" class="button">
-                    查看内部汇报版 →
+                    查看服务介绍 →
                 </a>
             </div>
         </div>
 
         <div class="cards" id="mobile-cards" style="display: none;">
             <!-- 客户版卡片 - 手机版 -->
-            <div class="card">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
                 <div class="card-icon">🎓</div>
-                <h2>客户版演示</h2>
+                <h2>了解服务</h2>
                 <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
                 
                 <div class="features">
@@ -366,29 +345,8 @@
                     </ul>
                 </div>
                 
-                <a href="mobile-client.html" class="button">
-                    查看客户版演示 →
-                </a>
-            </div>
-
-            <!-- 内部版卡片 - 手机版 -->
-            <div class="card business">
-                <div class="card-icon">📊</div>
-                <h2>内部汇报版</h2>
-                <p>面向公司管理层的项目汇报，完整的商业计划和财务分析</p>
-                
-                <div class="features">
-                    <ul>
-                        <li>市场分析与竞争优势</li>
-                        <li>服务体系设计</li>
-                        <li>财务预测与投资回报</li>
-                        <li>风险控制策略</li>
-                        <li>发展规划路线图</li>
-                    </ul>
-                </div>
-                
-                <a href="javascript:void(0);" onclick="checkPasswordMobile()" class="button">
-                    查看内部汇报版 →
+                <a href="客户版-毕业设计辅导服务介绍-手机版.html" class="button">
+                    查看服务介绍 →
                 </a>
             </div>
         </div>
@@ -399,26 +357,6 @@
     </div>
 
     <script>
-        // 密码验证函数 - 桌面版内部汇报
-        function checkPassword() {
-            const password = prompt('请输入访问密码：');
-            if (password === 'nbnx') {
-                window.location.href = '内部汇报-毕业设计辅导项目.html';
-            } else if (password !== null) {
-                alert('密码错误，无法访问！');
-            }
-        }
-
-        // 密码验证函数 - 手机版内部汇报
-        function checkPasswordMobile() {
-            const password = prompt('请输入访问密码：');
-            if (password === 'nbnx') {
-                window.location.href = 'mobile-internal.html';
-            } else if (password !== null) {
-                alert('密码错误，无法访问！');
-            }
-        }
-
         function showDesktop() {
             document.getElementById('desktop-cards').style.display = 'grid';
             document.getElementById('mobile-cards').style.display = 'none';

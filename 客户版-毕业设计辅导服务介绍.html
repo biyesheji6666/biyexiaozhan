@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>毕业设计辅导服务介绍</title>
+    <title>毕业设计辅导服务介绍 - 电脑版</title>
     <style>
         * {
             margin: 0;
@@ -28,7 +28,7 @@
             width: 100%;
             height: 100%;
             display: none;
-            background: white;
+            background: #f5f7fa;
             padding: 60px 80px;
             overflow-y: auto;
         }
@@ -226,7 +226,7 @@
         }
 
         .card {
-            background: #f5f7fa;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -253,9 +253,26 @@
             padding-left: 20px;
             margin: 20px 0;
         }
+
+        .visitor-stats {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 999;
+        }
+
+        .visitor-stats strong {
+            color: #ffd700;
+        }
     </style>
 </head>
 <body>
+    <div class="visitor-stats">🔥 总访问量：<strong id="unique-visitor-count">0</strong> 次</div>
     <div class="presentation">
         <!-- 封面 -->
         <div class="slide active">
@@ -263,21 +280,6 @@
                 <h1 style="font-size: 64px; margin-bottom: 30px;">🏠 毕设小站<span style="margin: 0 20px;"></span>毕业设计辅导服务</h1>
                 <p class="subtitle" style="font-size: 32px; margin-bottom: 40px;">让您的毕业设计无忧通关</p>
                 <p style="font-size: 28px; margin-bottom: 50px;">专业 · 高效 · 保障</p>
-                
-                <div style="display: flex; justify-content: center; gap: 60px; margin-top: 40px;">
-                    <div onclick="copyWechat()" style="background: white; padding: 25px 40px; border-radius: 15px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.2); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        <img src="素材/index/微信图标.png" alt="微信" style="width: 60px; height: 60px; margin-bottom: 10px;">
-                        <p style="font-size: 20px; margin-bottom: 5px; color: #667eea;">微信咨询</p>
-                        <p style="font-size: 24px; font-weight: bold; color: #764ba2;">KKkkkkkkikii</p>
-                        <p style="font-size: 14px; margin-top: 8px; color: #999;">点击复制微信号</p>
-                    </div>
-                    <div onclick="openQQ()" style="background: white; padding: 25px 40px; border-radius: 15px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.2); cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 60px; height: 60px; margin-bottom: 10px;">
-                        <p style="font-size: 20px; margin-bottom: 5px; color: #667eea;">QQ咨询</p>
-                        <p style="font-size: 24px; font-weight: bold; color: #764ba2;">450029784</p>
-                        <p style="font-size: 14px; margin-top: 8px; color: #999;">点击打开QQ</p>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -290,19 +292,18 @@
                     <div style="background: white; padding: 30px; border-radius: 10px; margin-top: 20px; height: 290px; display: flex; flex-direction: column; justify-content: center;">
                         <p style="margin-bottom: 15px;">专注于计算机专业毕业设计辅导的专业服务团队</p>
                         <ul style="margin: 0;">
-                            <li>✅ <strong>资深导师团队</strong>：5年+项目经验</li>
-                            <li>✅ <strong>系统化服务</strong>：从选题到答辩</li>
-                            <li>✅ <strong>通过率保障</strong>：承诺答辩通过</li>
-                            <li>✅ <strong>贴心服务</strong>：一对一随时答疑</li>
-                        </ul>
+                        <li>✅ <strong>资深导师团队</strong>：5年+项目经验</li>
+                        <li>✅ <strong>系统化服务</strong>：从选题到答辩</li>
+                        <li>✅ <strong>通过率保障</strong>：承诺答辩通过</li>
+                        <li>✅ <strong>贴心服务</strong>：一对一随时答疑</li>
+                    </ul>
                     </div>
                     
-                    <h3 style="text-align: center; margin-top: 35px; margin-bottom: 20px;">📞 微信咨询</h3>
-                    <div onclick="copyWechat()" style="background: white; padding: 35px 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 4px 15px rgba(102,126,234,0.3)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
-                        <img src="素材/index/微信图标.png" alt="微信" style="width: 80px; height: 80px; margin-bottom: 15px;">
-                        <p style="font-size: 26px; font-weight: bold; color: #764ba2; letter-spacing: 1px; margin-bottom: 12px;">KKkkkkkkikii</p>
-                        <p style="font-size: 18px; margin-top: 12px; color: #666; line-height: 1.6;">添加微信，享受专属顾问服务</p>
-                        <p style="font-size: 14px; margin-top: 10px; color: #999;">点击复制微信号</p>
+                    <h3 style="text-align: center; margin-top: 35px; margin-bottom: 20px;">📞 QQ咨询</h3>
+                    <div onclick="copyQQ()" style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s; height: 146px; display: flex; flex-direction: column; justify-content: center;" onmouseover="this.style.boxShadow='0 4px 15px rgba(102,126,234,0.3)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 50px; height: 50px; margin: 0 auto 8px;">
+                        <p style="font-size: 24px; font-weight: bold; color: #764ba2; letter-spacing: 1px; margin: 0;">450029784</p>
+                        <p style="font-size: 14px; margin-top: 8px; color: #999;">点击复制QQ号</p>
                     </div>
                 </div>
                 <div class="flex-item">
@@ -310,7 +311,7 @@
                     <div style="background: white; padding: 30px; border-radius: 10px; margin-top: 20px; height: 290px; display: flex; flex-direction: column; justify-content: space-between;">
                         <div style="text-align: center;">
                             <p style="font-size: 24px; color: #667eea; font-weight: bold; line-height: 1.5;">专业的人做专业的事 · 让您的毕设之路更轻松</p>
-                        </div>
+                    </div>
                         
                         <div style="border-top: 2px solid #f0f0f0; padding-top: 15px; margin-top: 15px;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
@@ -336,13 +337,46 @@
                         </div>
                     </div>
                     
-                    <h3 style="text-align: center; margin-top: 35px; margin-bottom: 20px;">📞 QQ咨询</h3>
-                    <div onclick="openQQ()" style="background: white; padding: 35px 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 4px 15px rgba(102,126,234,0.3)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
-                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 80px; height: 80px; margin-bottom: 15px;">
-                        <p style="font-size: 26px; font-weight: bold; color: #764ba2; letter-spacing: 1px; margin-bottom: 12px;">450029784</p>
-                        <p style="font-size: 18px; margin-top: 12px; color: #666; line-height: 1.6;">在线答疑，快速响应</p>
-                        <p style="font-size: 14px; margin-top: 10px; color: #999;">点击打开QQ</p>
+                    <h3 style="text-align: center; margin-top: 35px; margin-bottom: 20px;">💡 温馨提示</h3>
+                    <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 146px; display: flex; flex-direction: column; justify-content: center;">
+                        <p style="font-size: 18px; color: #333; line-height: 1.6; margin-bottom: 12px; font-weight: bold;">首次咨询请准备好以下信息：</p>
+                        <p style="font-size: 16px; color: #666; line-height: 1.6;">您的专业和年级 | 毕设的大致方向 | 目前的技术基础 | 学校的答辩时间</p>
                     </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 50px;">🏅 服务保障</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>✅ 质量保障</h3>
+                    <ul>
+                        <li>导师资质：5年+经验</li>
+                        <li>答辩通过：标准版及以上承诺</li>
+                        <li>未通过：免费继续辅导2个月</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>✅ 隐私保护</h3>
+                    <ul>
+                        <li>代码保密：严格保密</li>
+                        <li>论文保密：不用于其他用途</li>
+                        <li>信息安全：个人信息保护</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>✅ 服务保障</h3>
+                    <ul>
+                        <li>响应及时：最快10小时响应</li>
+                        <li>延期支持：特殊情况可延期</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>✅ 资料支持</h3>
+                    <ul>
+                        <li>项目相关所有完整代码</li>
+                        <li>技术文档：海量资料</li>
+                        <li>音、视频配套教程</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -390,11 +424,8 @@
                 </div>
             </div>
             <p class="center" style="font-size: 28px; color: #27ae60; font-weight: bold; margin-top: 30px;">✅ 别担心，我们来帮您解决！</p>
-        </div>
 
-        <!-- 服务方向 -->
-        <div class="slide">
-            <h2>🔧 我们支持的技术方向</h2>
+            <h2 style="margin-top: 50px;">🔧 我们支持的技术方向</h2>
             <div class="grid-2" style="margin-top: 20px;">
                 <div class="card">
                     <h3>🌐 Web开发方向</h3>
@@ -413,19 +444,19 @@
                     <p><strong>适用项目：</strong>图像识别、NLP、推荐系统</p>
                 </div>
                 <div class="card">
-                    <h3>🎮 游戏开发方向</h3>
-                    <p><strong>技术栈：</strong>Unity3D / Unreal Engine / Cocos Creator</p>
-                    <p><strong>适用项目：</strong>2D游戏 / 3D游戏 / 休闲小游戏</p>
+                <h3>🎮 游戏开发方向</h3>
+                <p><strong>技术栈：</strong>Unity3D / Unreal Engine / Cocos Creator</p>
+                <p><strong>适用项目：</strong>2D游戏 / 3D游戏 / 休闲小游戏</p>
                 </div>
             </div>
         </div>
 
-        <!-- 基础套餐 & 标准套餐 -->
+        <!-- 服务套餐 -->
         <div class="slide">
             <h2>💎 服务套餐</h2>
-            <div class="grid-2" style="gap: 30px; margin-top: 30px;">
+            <div class="grid-2" style="gap: 25px; margin-top: 20px;">
                 <!-- 基础套餐 -->
-                <div class="card" style="padding: 30px;">
+                <div class="card" style="padding: 25px;">
                     <h3 style="text-align: center; margin-bottom: 20px;">🔵 基础套餐</h3>
                     <div class="center" style="margin: 15px 0;">
                         <span class="old-price">¥688</span>
@@ -435,22 +466,22 @@
                     <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 25px;">适合：有一定编程基础，主要需要方向指导的同学</p>
                     
                     <h4>服务内容</h4>
-                    <ul style="font-size: 20px;">
+                    <ul style="font-size: 16px;">
                         <li>✅ 按照需求开发项目雏形（完全免费，满意再付款！）</li>
                         <li>✅ 在线答疑</li>
                         <li>✅ 项目代码</li>
                         <li>✅ 技术文档资料包</li>
                     </ul>
                     
-                    <h4 style="margin-top: 25px;">服务特点</h4>
-                    <ul style="font-size: 20px;">
+                    <h4 style="margin-top: 20px;">服务特点</h4>
+                    <ul style="font-size: 16px;">
                         <li>📝 工作日在线答疑</li>
                         <li>⏰ 服务周期：3个月</li>
                     </ul>
                 </div>
 
                 <!-- 标准套餐 -->
-                <div class="card" style="padding: 30px; border: 3px solid #e74c3c;">
+                <div class="card" style="padding: 25px; border: 3px solid #e74c3c;">
                     <h3 style="text-align: center; margin-bottom: 20px;">🟢 标准套餐</h3>
                     <div class="center" style="margin: 15px 0;">
                         <span class="old-price">¥988</span>
@@ -461,29 +492,23 @@
                     <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 25px;">适合：希望得到全程系统化指导的同学</p>
                     
                     <h4>服务内容</h4>
-                    <ul style="font-size: 20px;">
+                    <ul style="font-size: 16px;">
                         <li>✅ 按照需求开发项目雏形（完全免费，满意再付款！）</li>
-                        <li>✅ 在线答疑（增强版，24小时内响应）</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目代码以及代码审查服务</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 技术文档资料包</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 在线答疑（增强版，24小时内响应）</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目代码以及代码审查服务</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 技术文档资料包</li>
                     </ul>
                     
-                    <h4 style="margin-top: 25px;">服务特点</h4>
-                    <ul style="font-size: 20px;">
+                    <h4 style="margin-top: 20px;">服务特点</h4>
+                    <ul style="font-size: 16px;">
                         <li>📝 24小时内响应</li>
                         <li>⏰ 服务周期：4个月</li>
                         <li>🎖️ 答辩通过保障</li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <!-- 高级套餐 & 尊享套餐 -->
-        <div class="slide">
-            <h2>🎯 高级服务套餐</h2>
-            <div class="grid-2" style="gap: 30px; margin-top: 30px;">
                 <!-- 高级套餐 -->
-                <div class="card" style="padding: 30px;">
+                <div class="card" style="padding: 25px;">
                     <h3 style="text-align: center; margin-bottom: 20px;">🟡 高级套餐</h3>
                     <div class="center" style="margin: 15px 0;">
                         <span class="old-price">¥1288</span>
@@ -493,18 +518,18 @@
                     <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 25px;">适合：希望获得最高质量服务和保障的同学</p>
                     
                     <h4>服务内容</h4>
-                    <ul style="font-size: 20px;">
+                    <ul style="font-size: 16px;">
                         <li>✅ 按照需求开发项目雏形（完全免费，满意再付款！）</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 在线答疑（增强版，12小时内响应）</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 在线答疑（增强版，12小时内响应）</li>
                         <li>✅ 项目代码以及代码审查服务</li>
                         <li>✅ 技术文档资料包</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 专属导师</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目部署上线指导</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 论文辅导</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 专属导师</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目部署上线指导</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 论文辅导</li>
                     </ul>
                     
-                    <h4 style="margin-top: 25px;">服务特点</h4>
-                    <ul style="font-size: 20px;">
+                    <h4 style="margin-top: 20px;">服务特点</h4>
+                    <ul style="font-size: 16px;">
                         <li>📝 12小时内响应</li>
                         <li>👨‍💻 固定专属导师</li>
                         <li>🚀 部署上线支持</li>
@@ -515,7 +540,7 @@
                 </div>
 
                 <!-- 尊享套餐 -->
-                <div class="card" style="padding: 30px; border: 3px solid #f39c12;">
+                <div class="card" style="padding: 25px; border: 3px solid #f39c12;">
                     <h3 style="text-align: center; margin-bottom: 20px;">💎 尊享套餐</h3>
                     <div class="center" style="margin: 15px 0;">
                         <span class="old-price">¥1588</span>
@@ -526,19 +551,19 @@
                     <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 25px;">适合：对项目要求极高，希望获得全方位保障的同学</p>
                     
                     <h4>服务内容</h4>
-                    <ul style="font-size: 20px;">
+                    <ul style="font-size: 16px;">
                         <li>✅ 按照需求开发项目雏形（完全免费，满意再付款！）</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 在线答疑（增强版，10小时内响应）</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目代码以及无限次代码审查服务</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 在线答疑（增强版，10小时内响应）</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 项目代码以及无限次代码审查服务</li>
                         <li>✅ 技术文档资料包</li>
                         <li>✅ 专属导师</li>
                         <li>✅ 项目部署上线指导</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 论文辅导及润色</li>
-                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 35px; width: auto; vertical-align: middle; margin-right: 5px;"> 根据需求解锁更多服务</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 论文辅导及润色</li>
+                        <li><img src="素材/index/new图标.png" alt="NEW" style="height: 30px; width: auto; vertical-align: middle; margin-right: 5px;"> 根据需求解锁更多服务</li>
                     </ul>
                     
-                    <h4 style="margin-top: 25px;">服务特点</h4>
-                    <ul style="font-size: 20px;">
+                    <h4 style="margin-top: 20px;">服务特点</h4>
+                    <ul style="font-size: 16px;">
                         <li>📝 10小时内响应</li>
                         <li>👨‍💻 固定专属导师</li>
                         <li>🔍 无限次代码审查</li>
@@ -651,24 +676,24 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="center" style="font-size: 24px; margin-top: 30px;">💡 <strong>建议：</strong>80%的学员选择标准套餐或高级套餐</p>
-        </div>
+            <div class="center" style="margin-top: 30px;">
+                <p style="font-size: 24px; margin-bottom: 15px;">💡 <strong>建议：</strong>80%的学员选择标准套餐或高级套餐，性价比最高</p>
+                <p style="font-size: 22px; margin-bottom: 15px;">💡 <strong>数据说明：</strong>标准套餐答辩通过率98%，高级套餐接近100%</p>
+                <p style="font-size: 22px;">💡 <strong>热门选择：</strong>大四学员首选标准套餐，研究生偏好高级套餐</p>
+            </div>
 
-        <!-- 优惠活动 -->
-        <div class="slide">
-            <h2>💰 优惠活动</h2>
-            <p style="font-size: 24px; text-align: center; margin-bottom: 30px;">多种优惠方式，为您省钱</p>
+            <h2 style="margin-top: 50px;">💰 优惠活动</h2>
+            <p style="font-size: 24px; text-align: center; margin-bottom: 20px;">多种优惠方式，为您省钱</p>
             <div class="grid-2">
                 <div class="card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
                     <h3 style="color: white;">🎁 早鸟优惠</h3>
-                    <p style="color: white; font-size: 22px;">提前报名享受特惠价<br>最高可省¥2,000</p>
+                    <p style="color: white; font-size: 22px;">提前报名享受特惠价</p>
                 </div>
                 <div class="card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
                     <h3 style="color: white;">👥 团购优惠</h3>
-                    <p style="color: white; font-size: 20px;">
-                        3人团：每人减¥300<br>
-                        5人团：每人减¥500<br>
-                        10人团：每人减¥800
+                    <p style="color: white; font-size: 22px;">
+                        3人团：每人减¥50<br>
+                        5人团：每人减¥60
                     </p>
                 </div>
                 <div class="card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
@@ -677,60 +702,13 @@
                 </div>
                 <div class="card" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); color: white;">
                     <h3 style="color: white;">🎉 推荐奖励</h3>
-                    <p style="color: white; font-size: 20px;">
-                        推荐成功：奖励¥500<br>
-                        被推荐：优惠¥300<br>
-                        推荐3人+：再奖¥1,000
-                    </p>
+                    <p style="color: white; font-size: 22px;">推荐成功：奖励¥50</p>
                 </div>
             </div>
             <div class="highlight" style="margin-top: 30px;">
-                <h3>💡 省钱示例</h3>
-                <p style="font-size: 22px;">标准套餐原价¥5,980 → 早鸟价¥4,980 → 5人团-¥500 → 全款-5% = <span style="font-size: 32px;">¥4,256</span></p>
-                <p style="font-size: 20px;">共省¥1,724！</p>
-            </div>
-        </div>
-
-        <!-- 服务保障 -->
-        <div class="slide">
-            <h2>🏅 服务保障</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>✅ 质量保障</h3>
-                    <ul>
-                        <li>导师资质：5年+经验</li>
-                        <li>答辩通过：标准版及以上承诺</li>
-                        <li>未通过：免费继续辅导2个月</li>
-                        <li>服务标准：每次有记录评分</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>✅ 隐私保护</h3>
-                    <ul>
-                        <li>保密协议：签订正式协议</li>
-                        <li>代码保密：严格保密</li>
-                        <li>论文保密：不用于其他用途</li>
-                        <li>信息安全：个人信息保护</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>✅ 服务保障</h3>
-                    <ul>
-                        <li>响应及时：最快12小时响应</li>
-                        <li>更换导师：不满意可更换</li>
-                        <li>投诉处理：24小时内响应</li>
-                        <li>延期支持：特殊情况可延期</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>✅ 资料支持</h3>
-                    <ul>
-                        <li>模板代码：项目模板</li>
-                        <li>技术文档：海量资料</li>
-                        <li>视频教程：配套课程</li>
-                        <li>案例参考：优秀案例库</li>
-                    </ul>
-                </div>
+                <h3 style="color: #ffd700; font-weight: bold;">💡 省钱示例</h3>
+                <p style="font-size: 22px; color: #ffffff;">标准套餐原价¥988 → 早鸟价¥888 → 5人团-¥60 → 全款-5% = <span style="font-size: 32px; color: #ffd700; font-weight: bold;">¥787</span></p>
+                <p style="font-size: 20px; color: #ffd700; font-weight: bold;">共省¥201！</p>
             </div>
         </div>
 
@@ -739,15 +717,15 @@
             <h2>🎉 成功案例</h2>
             <p style="font-size: 24px; text-align: center; margin-bottom: 30px;">他们的成功，您也可以复制</p>
             
-            <div class="card" style="margin-bottom: 20px;">
-                <h3>案例1：Web管理系统</h3>
-                <p><strong>学员：</strong>张同学 | 某985高校计算机专业</p>
-                <p><strong>选择：</strong>标准套餐 | <strong>项目：</strong>基于Spring Boot的教务管理系统</p>
-                <p><strong>结果：</strong>答辩优秀，项目被学院展示</p>
-                <p class="quote">"导师非常专业，代码审查很细致，学到很多东西"</p>
-            </div>
-
             <div class="grid-2">
+                <div class="card">
+                    <h3>案例1：Web管理系统</h3>
+                    <p><strong>学员：</strong>张同学 | 某985高校计算机专业</p>
+                    <p><strong>选择：</strong>标准套餐</p>
+                    <p><strong>项目：</strong>基于Spring Boot的教务管理系统</p>
+                    <p><strong>结果：</strong>答辩优秀，项目被学院展示</p>
+                    <p class="quote">"导师非常专业，代码审查很细致，学到很多东西"</p>
+                </div>
                 <div class="card">
                     <h3>案例2：AI图像识别</h3>
                     <p><strong>学员：</strong>李同学 | 某211高校</p>
@@ -764,22 +742,30 @@
                     <p><strong>结果：</strong>答辩通过</p>
                     <p class="quote">"从零开始学，导师手把手教"</p>
                 </div>
+                <div class="card">
+                    <h3>案例4：智能物联网</h3>
+                    <p><strong>学员：</strong>陈同学 | 某985高校</p>
+                    <p><strong>选择：</strong>尊享套餐</p>
+                    <p><strong>项目：</strong>智能家居控制系统</p>
+                    <p><strong>结果：</strong>答辩优秀，获校级优秀毕设</p>
+                    <p class="quote">"全程VIP服务，论文润色很专业"</p>
+                </div>
             </div>
 
             <div class="highlight center" style="margin-top: 30px;">
-                <h3>📊 服务数据</h3>
+                <h3 style="color: #ffd700; font-weight: bold;">📊 服务数据</h3>
                 <div class="grid-3">
                     <div>
-                        <p style="font-size: 40px; font-weight: bold;">500+</p>
-                        <p style="font-size: 20px;">服务学员</p>
+                        <p style="font-size: 40px; font-weight: bold; color: #ffd700;">500+</p>
+                        <p style="font-size: 20px; color: #ffffff;">服务学员</p>
                     </div>
                     <div>
-                        <p style="font-size: 40px; font-weight: bold;">98%</p>
-                        <p style="font-size: 20px;">答辩通过率</p>
+                        <p style="font-size: 40px; font-weight: bold; color: #ffd700;">98%</p>
+                        <p style="font-size: 20px; color: #ffffff;">答辩通过率</p>
                     </div>
                     <div>
-                        <p style="font-size: 40px; font-weight: bold;">95%</p>
-                        <p style="font-size: 20px;">满意度</p>
+                        <p style="font-size: 40px; font-weight: bold; color: #ffd700;">95%</p>
+                        <p style="font-size: 20px; color: #ffffff;">满意度</p>
                     </div>
                 </div>
             </div>
@@ -790,169 +776,38 @@
             <h2>❓ 常见问题 FAQ</h2>
             
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q1: 你们的服务是代做吗？</h4>
-                <p><strong>A:</strong> 不是。我们提供的是辅导服务，导师教您如何做，但代码需要您自己写。我们会指导思路、审查代码、解决难题，让您真正学会。</p>
-            </div>
-
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q2: 如果答辩没通过怎么办？</h4>
+                <h4>Q1: 如果答辩没通过怎么办？</h4>
                 <p><strong>A:</strong> 标准套餐及以上，我们承诺答辩通过。万一没通过，我们会免费继续指导您直到通过（最多延长2个月）。</p>
             </div>
 
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q3: 导师靠谱吗？</h4>
+                <h4>Q2: 导师靠谱吗？</h4>
                 <p><strong>A:</strong> 我们的导师都是5年以上开发经验的专业人士，经过严格筛选和培训。每次服务后您可以评分，满意度低的导师会被淘汰。</p>
             </div>
 
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q4: 中途可以换导师吗？</h4>
-                <p><strong>A:</strong> 可以。如果您对导师不满意，可以申请更换，我们会尽快为您安排。</p>
-            </div>
-
-            <div class="card">
-                <h4>Q5: 服务周期能延长吗？</h4>
+                <h4>Q3: 服务周期能延长吗？</h4>
                 <p><strong>A:</strong> 可以。如果遇到特殊情况（如学校延期答辩），可以申请服务周期延长。</p>
             </div>
-        </div>
 
-        <!-- 常见问题2 -->
-        <div class="slide">
-            <h2>❓ 常见问题 FAQ（续）</h2>
-            
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q6: 支持哪些技术栈？</h4>
+                <h4>Q4: 支持哪些技术栈？</h4>
                 <p><strong>A:</strong> 我们支持主流的Web、移动、AI、大数据、游戏开发等方向。具体技术栈请咨询客服确认。</p>
             </div>
 
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q7: 可以先试听吗？</h4>
+                <h4>Q5: 可以先试听吗？</h4>
                 <p><strong>A:</strong> 可以。首次咨询免费（30分钟），您可以和导师沟通项目，了解我们的服务。</p>
             </div>
 
             <div class="card" style="margin-bottom: 20px;">
-                <h4>Q8: 项目代码会被其他人使用吗？</h4>
+                <h4>Q6: 项目代码会被其他人使用吗？</h4>
                 <p><strong>A:</strong> 绝对不会。我们签订保密协议，您的代码和论文严格保密，不会用于其他学员或商业用途。</p>
             </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q9: 价格可以优惠吗？</h4>
-                <p><strong>A:</strong> 我们有多种优惠方式：早鸟价、团购、全款优惠、推荐奖励等。建议组团报名，最划算。</p>
-            </div>
-
             <div class="card">
-                <h4>Q10: 什么时候报名最合适？</h4>
-                <p><strong>A:</strong> 建议提前3-6个月报名。越早开始，时间越充裕，效果越好。临近答辩时间紧张，服务效果会打折扣。</p>
-            </div>
-        </div>
-
-        <!-- 报名流程 -->
-        <div class="slide">
-            <h2>📝 报名流程</h2>
-            <p style="font-size: 24px; text-align: center; margin-bottom: 30px;">三步开启您的毕设辅导之旅</p>
-            
-            <div class="grid-3">
-                <div class="card center">
-                    <div style="font-size: 48px; color: #667eea; margin-bottom: 20px;">1️⃣</div>
-                    <h3>咨询了解</h3>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>联系客服咨询</li>
-                        <li>描述需求方向</li>
-                        <li>推荐合适套餐</li>
-                        <li>免费试听30分钟</li>
-                    </ul>
-                </div>
-                <div class="card center">
-                    <div style="font-size: 48px; color: #667eea; margin-bottom: 20px;">2️⃣</div>
-                    <h3>签约付费</h3>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>确定服务套餐</li>
-                        <li>签订服务合同</li>
-                        <li>支付服务费用</li>
-                        <li>匹配专属导师</li>
-                    </ul>
-                </div>
-                <div class="card center">
-                    <div style="font-size: 48px; color: #667eea; margin-bottom: 20px;">3️⃣</div>
-                    <h3>开始服务</h3>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>预约辅导时间</li>
-                        <li>沟通项目需求</li>
-                        <li>正式开始辅导</li>
-                        <li>定期跟踪进度</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="highlight" style="margin-top: 40px;">
-                <h3>⏰ 建议报名时间</h3>
-                <table style="background: white; margin-top: 20px;">
-                    <tr>
-                        <th>您的情况</th>
-                        <th>建议时间</th>
-                        <th>推荐套餐</th>
-                    </tr>
-                    <tr>
-                        <td>大四上学期刚开始</td>
-                        <td>9-10月</td>
-                        <td>标准版/高级版</td>
-                    </tr>
-                    <tr>
-                        <td>大四上学期进行中</td>
-                        <td>11-12月</td>
-                        <td>标准版</td>
-                    </tr>
-                    <tr>
-                        <td>大四下学期开始</td>
-                        <td>次年2-3月</td>
-                        <td>高级版</td>
-                    </tr>
-                    <tr>
-                        <td>距离答辩不足2个月</td>
-                        <td>紧急</td>
-                        <td>尊享版</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- 联系我们 -->
-        <div class="slide">
-            <h2>📞 联系我们</h2>
-            <p style="font-size: 24px; text-align: center; margin-bottom: 30px;">多种方式，随时联系</p>
-            
-            <div class="grid-2">
-                <div class="card">
-                    <h3>在线咨询</h3>
-                    <ul style="font-size: 22px;">
-                        <li>💬 <strong>微信：</strong>[待补充]</li>
-                        <li>💬 <strong>QQ：</strong>[待补充]</li>
-                        <li>📱 <strong>客服电话：</strong>[待补充]</li>
-                        <li>🌐 <strong>官方网站：</strong>[待补充]</li>
-                    </ul>
-                    <h4 style="margin-top: 30px;">工作时间</h4>
-                    <p>周一至周五: 9:00-21:00</p>
-                    <p>周末节假日: 10:00-18:00</p>
-                    <p>紧急情况: 24小时在线</p>
-                </div>
-                <div class="card">
-                    <h3>线下咨询</h3>
-                    <ul style="font-size: 22px;">
-                        <li>📍 <strong>地址：</strong>[待补充]</li>
-                        <li>🚇 <strong>交通：</strong>[待补充]</li>
-                        <li>⏰ <strong>预约：</strong>提前1天预约</li>
-                    </ul>
-                    <h4 style="margin-top: 30px;">社交媒体</h4>
-                    <p>📘 知乎: [待补充]</p>
-                    <p>📺 B站: [待补充]</p>
-                    <p>📱 抖音: [待补充]</p>
-                    <p>📗 小红书: [待补充]</p>
-                </div>
-            </div>
-
-            <div class="highlight" style="margin-top: 30px;">
-                <h3>💡 温馨提示</h3>
-                <p style="font-size: 20px;">首次咨询请准备好以下信息：</p>
-                <p style="font-size: 20px;">您的专业和年级 | 毕设的大致方向 | 目前的技术基础 | 学校的答辩时间</p>
+                <h4>Q7: 价格可以优惠吗？</h4>
+                <p><strong>A:</strong> 我们有多种优惠方式：早鸟价、团购、全款优惠、推荐奖励等。建议组团报名，最划算。</p>
             </div>
         </div>
 
@@ -964,7 +819,7 @@
             <div class="grid-3" style="margin-bottom: 40px;">
                 <div class="card center" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
                     <h3 style="color: white;">💰 早鸟特惠</h3>
-                    <p style="color: white; font-size: 20px; margin-top: 20px;">限时优惠中<br>现在报名享受早鸟价<br><strong style="font-size: 28px;">最高可省¥2,000</strong></p>
+                    <p style="color: white; font-size: 20px; margin-top: 20px;">限时优惠中<br>现在报名享受早鸟价<br><strong style="font-size: 28px;">最高可省¥100</strong></p>
                 </div>
                 <div class="card center" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
                     <h3 style="color: white;">🎁 新客礼包</h3>
@@ -972,7 +827,7 @@
                 </div>
                 <div class="card center" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
                     <h3 style="color: white;">👥 团购更优惠</h3>
-                    <p style="color: white; font-size: 20px; margin-top: 20px;">邀请好友一起<br>3人团减¥300/人<br><strong style="font-size: 28px;">5人团减¥500/人</strong></p>
+                    <p style="color: white; font-size: 20px; margin-top: 20px;">邀请好友一起<br>3人团减¥50/人<br><strong style="font-size: 28px;">5人团减¥60/人</strong></p>
                 </div>
             </div>
 
@@ -993,16 +848,25 @@
                     <p style="margin-bottom: 20px;">让毕业设计不再是压力</p>
                     <p style="font-size: 36px; font-weight: bold;">而是展示能力的舞台</p>
                 </div>
-                <div style="margin-top: 60px; padding: 30px; background: white; border-radius: 20px;">
-                    <p style="font-size: 24px; color: #667eea; margin-bottom: 10px;">扫码添加客服微信</p>
-                    <p style="font-size: 20px; color: #764ba2;">立即咨询，开启毕设辅导之旅</p>
+                <div style="display: flex; gap: 30px; margin-top: 60px; justify-content: center; align-items: stretch;">
+                    <div onclick="copyQQ()" style="flex: 1; max-width: 350px; padding: 30px; background: white; border-radius: 20px; cursor: pointer; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 80px; height: 80px; margin-bottom: 15px;">
+                        <p style="font-size: 24px; color: #667eea; margin-bottom: 10px;">QQ咨询</p>
+                        <p style="font-size: 32px; color: #764ba2; font-weight: bold; letter-spacing: 2px;">450029784</p>
+                        <p style="font-size: 18px; color: #999; margin-top: 10px;">点击复制QQ号，立即咨询</p>
+                    </div>
+                    <div style="flex: 1; max-width: 350px; padding: 25px; background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="font-size: 24px; color: #667eea; margin-bottom: 15px; text-align: center;">💡 温馨提示</h3>
+                        <p style="font-size: 16px; color: #333; line-height: 1.6; text-align: center; margin-bottom: 12px; white-space: nowrap;">首次咨询请准备好以下信息：</p>
+                        <p style="font-size: 18px; color: #666; line-height: 2; text-align: center;">您的专业和年级<br>毕设的大致方向<br>目前的技术基础<br>学校的答辩时间</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="slide-number">
-        <span id="current">1</span> / <span id="total">18</span>
+        <span id="current">1</span> / <span id="total">9</span>
     </div>
 
     <div style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(102, 126, 234, 0.9); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; z-index: 999;">
@@ -1051,6 +915,26 @@
                 alert('✅ 微信号已复制：' + wechatId + '\n\n请打开微信，在搜索框粘贴添加好友！');
             } catch (err) {
                 alert('❌ 复制失败，请手动复制微信号：' + wechatId);
+            }
+            
+            document.body.removeChild(tempInput);
+        }
+
+        // 复制QQ号
+        function copyQQ() {
+            const qqNumber = '450029784';
+            
+            // 创建临时输入框
+            const tempInput = document.createElement('input');
+            tempInput.value = qqNumber;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                alert('✅ QQ号已复制：' + qqNumber + '\n\n请打开QQ，在搜索框粘贴添加好友！');
+            } catch (err) {
+                alert('❌ 复制失败，请手动复制QQ号：' + qqNumber);
             }
             
             document.body.removeChild(tempInput);
@@ -1122,16 +1006,20 @@
             }
         });
 
+        // 读取并显示总访问量（唯一访客数）
+        function displayUniqueVisitors() {
+            let uniqueVisitors = localStorage.getItem('uniqueVisitorCount');
+            if (uniqueVisitors === null) {
+                uniqueVisitors = 0;
+            }
+            document.getElementById('unique-visitor-count').textContent = uniqueVisitors;
+        }
+
         // 页面加载时更新访问量统计
         window.onload = function() {
             updateVisitCount();
+            displayUniqueVisitors();
         };
     </script>
 </body>
 </html>
-
-
-
-
-
-
