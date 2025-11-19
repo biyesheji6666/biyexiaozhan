@@ -394,10 +394,7 @@
         </div>
 
         <div class="footer">
-            <p style="font-size: 14px; margin-bottom: 10px;">
-                🔥 总访问量：<span id="visit-count" style="font-weight: bold; color: #ffd700;">0</span> 次
-            </p>
-            <p style="margin-top: 10px; font-size: 14px;">© 毕设小站 | All Rights Reserved</p>
+            <p style="font-size: 14px;">© 毕设小站 | All Rights Reserved</p>
         </div>
     </div>
 
@@ -446,26 +443,6 @@
             document.getElementById('mobile-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
-        // 访问量统计功能
-        function updateVisitCount() {
-            // 获取当前访问次数
-            let visitCount = localStorage.getItem('pageVisitCount');
-            
-            // 如果是首次访问，初始化为17123
-            if (visitCount === null) {
-                visitCount = 17123;
-            }
-            
-            // 增加访问次数
-            visitCount = parseInt(visitCount) + 1;
-            
-            // 保存到本地存储
-            localStorage.setItem('pageVisitCount', visitCount);
-            
-            // 显示访问次数
-            document.getElementById('visit-count').textContent = visitCount;
-        }
-
         // 唯一访客统计功能（每个设备只计数一次）
         function updateUniqueVisitors() {
             // 检查该设备是否已经访问过
@@ -491,8 +468,6 @@
 
         // 自动检测设备类型
         window.onload = function() {
-            // 更新访问统计
-            updateVisitCount();
             // 更新唯一访客统计
             updateUniqueVisitors();
             
