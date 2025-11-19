@@ -50,74 +50,13 @@
             margin-bottom: 25px;
         }
 
-        .device-selector {
-            background: white;
-            border-radius: 15px;
-            padding: 25px 20px;
-            margin-bottom: 25px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .device-selector h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .device-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .device-btn {
-            padding: 12px 30px;
-            border-radius: 10px;
-            border: 2px solid #667eea;
-            background: white;
-            color: #667eea;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.3s;
-            min-width: 170px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .device-btn:hover {
-            background: #667eea;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .device-btn.active {
-            background: #667eea;
-            color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-
         @media (max-width: 768px) {
-            .device-selector {
-                padding: 20px 15px;
+            .mobile-break {
+                display: block;
             }
-
-            .device-selector h3 {
-                font-size: 18px;
-                margin-bottom: 8px;
-            }
-
-            .device-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .device-btn {
-                width: 100%;
-                min-width: auto;
-                padding: 12px 20px;
-                font-size: 15px;
+            
+            .desktop-space {
+                display: none;
             }
 
             .header h1 {
@@ -148,29 +87,6 @@
             .card-icon {
                 font-size: 48px;
             }
-        }
-
-        .version-links {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        .version-link {
-            display: inline-block;
-            padding: 8px 20px;
-            background: #f5f7fa;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-
-        .version-link:hover {
-            background: #667eea;
-            color: white;
         }
 
         .card {
@@ -276,55 +192,21 @@
             margin: 5px 0;
         }
 
+        .mobile-break {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🏠 毕设小站<span style="margin: 0 30px;"></span>毕业设计辅导服务</h1>
+            <h1>🏠 毕设小站<span class="desktop-space" style="margin: 0 30px;"></span><br class="mobile-break">毕业设计辅导服务</h1>
             <p>专业 · 高效 · 保障</p>
         </div>
 
-        <div class="device-selector">
-            <h3>📱 选择您的设备类型</h3>
-            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">为您提供最佳浏览体验</p>
-            <div class="device-buttons">
-                <button class="device-btn" id="mobile-btn" onclick="showMobile()">
-                    <div style="font-size: 24px; margin-bottom: 4px;">📱</div>
-                    手机端（移动版）
-                </button>
-                <button class="device-btn" id="desktop-btn" onclick="showDesktop()">
-                    <div style="font-size: 24px; margin-bottom: 4px;">🖥️</div>
-                    电脑端（桌面版）
-                </button>
-            </div>
-        </div>
-
-        <div class="cards" id="desktop-cards">
+        <div class="cards">
             <!-- 客户版卡片 -->
-            <div class="card" style="max-width: 550px; margin: 0 auto;">
-                <div class="card-icon">🎓</div>
-                <h2>了解服务</h2>
-                <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
-                
-                <div class="features">
-                    <ul>
-                        <li>服务套餐详细介绍</li>
-                        <li>优惠活动与定价</li>
-                        <li>成功案例展示</li>
-                        <li>常见问题解答</li>
-                        <li>联系方式</li>
-                    </ul>
-                </div>
-                
-                <a href="客户版-毕业设计辅导服务介绍.html" class="button">
-                    查看服务介绍 →
-                </a>
-            </div>
-        </div>
-
-        <div class="cards" id="mobile-cards" style="display: none;">
-            <!-- 客户版卡片 - 手机版 -->
             <div class="card" style="max-width: 550px; margin: 0 auto;">
                 <div class="card-icon">🎓</div>
                 <h2>了解服务</h2>
@@ -352,30 +234,6 @@
     </div>
 
     <script>
-        function showDesktop() {
-            document.getElementById('desktop-cards').style.display = 'grid';
-            document.getElementById('mobile-cards').style.display = 'none';
-            
-            // 更新按钮状态
-            document.getElementById('desktop-btn').classList.add('active');
-            document.getElementById('mobile-btn').classList.remove('active');
-            
-            // 平滑滚动到卡片区域
-            document.getElementById('desktop-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
-        function showMobile() {
-            document.getElementById('desktop-cards').style.display = 'none';
-            document.getElementById('mobile-cards').style.display = 'grid';
-            
-            // 更新按钮状态
-            document.getElementById('desktop-btn').classList.remove('active');
-            document.getElementById('mobile-btn').classList.add('active');
-            
-            // 平滑滚动到卡片区域
-            document.getElementById('mobile-cards').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
         // 唯一访客统计功能（每个设备只计数一次）
         function updateUniqueVisitors() {
             // 检查该设备是否已经访问过
@@ -399,17 +257,9 @@
             }
         }
 
-        // 自动检测设备类型
+        // 页面加载时更新统计
         window.onload = function() {
-            // 更新唯一访客统计
             updateUniqueVisitors();
-            
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            if (isMobile) {
-                showMobile();
-            } else {
-                showDesktop();
-            }
         };
     </script>
 </body>
