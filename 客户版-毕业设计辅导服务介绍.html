@@ -276,10 +276,35 @@
     <div class="presentation">
         <!-- 封面 -->
         <div class="slide active">
-            <div class="highlight" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                <h1 style="font-size: 64px; margin-bottom: 30px;">🏠 毕设小站<span style="margin: 0 20px;"></span>毕业设计辅导服务</h1>
-                <p class="subtitle" style="font-size: 32px; margin-bottom: 40px;">让您的毕业设计无忧通关</p>
-                <p style="font-size: 28px; margin-bottom: 50px;">专业 · 高效 · 保障</p>
+            <div class="highlight" style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+                <h1 style="font-size: 56px; margin-bottom: 20px;">🏠 毕设小站<span style="margin: 0 15px;"></span>毕业设计辅导服务</h1>
+                <p class="subtitle" style="font-size: 28px; margin-bottom: 35px;">让您的毕业设计无忧通关</p>
+                <p style="font-size: 24px; margin-bottom: 40px;">专业 · 高效 · 保障</p>
+                
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 30px 40px; border-radius: 15px; max-width: 800px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+                    <h3 style="color: #667eea; font-size: 26px; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #667eea; padding-bottom: 10px;">📋 内容导航</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div onclick="jumpToSlide(1)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">🎯 关于我们</span>
+                        </div>
+                        <div onclick="jumpToSlide(2)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">😰 学员痛点</span>
+                        </div>
+                        <div onclick="jumpToSlide(3)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">💎 服务套餐</span>
+                        </div>
+                        <div onclick="jumpToSlide(4)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">📊 套餐对比</span>
+                        </div>
+                        <div onclick="jumpToSlide(5)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">🎉 成功案例</span>
+                        </div>
+                        <div onclick="jumpToSlide(6)" style="padding: 12px 20px; background: #f5f7fa; border-radius: 8px; cursor: pointer; transition: all 0.3s; border-left: 4px solid #667eea; color: #333;" onmouseover="this.style.background='#667eea'; this.style.color='white';" onmouseout="this.style.background='#f5f7fa'; this.style.color='#333';">
+                            <span style="font-size: 18px; font-weight: bold;">🎯 立即行动</span>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #999;">点击任意模块快速跳转，或使用键盘方向键翻页</p>
+                </div>
             </div>
         </div>
 
@@ -300,10 +325,12 @@
                     </div>
                     
                     <h3 style="text-align: center; margin-top: 35px; margin-bottom: 20px;">📞 QQ咨询</h3>
-                    <div onclick="copyQQ()" style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s; height: 146px; display: flex; flex-direction: column; justify-content: center;" onmouseover="this.style.boxShadow='0 4px 15px rgba(102,126,234,0.3)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
-                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 50px; height: 50px; margin: 0 auto 8px;">
-                        <p style="font-size: 24px; font-weight: bold; color: #764ba2; letter-spacing: 1px; margin: 0;">450029784</p>
-                        <p style="font-size: 14px; margin-top: 8px; color: #999;">点击复制QQ号</p>
+                    <div onclick="copyQQ()" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s; height: 146px; display: flex; align-items: center; justify-content: center; gap: 20px;" onmouseover="this.style.boxShadow='0 4px 15px rgba(102,126,234,0.3)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'">
+                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 60px; height: 60px; flex-shrink: 0;">
+                        <div style="text-align: left;">
+                            <p style="font-size: 24px; font-weight: bold; color: #764ba2; letter-spacing: 1px; margin: 0 0 8px 0;">450029784</p>
+                            <p style="font-size: 14px; color: #999; margin: 0;">点击复制QQ号</p>
+                        </div>
                     </div>
                 </div>
                 <div class="flex-item">
@@ -769,104 +796,100 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 常见问题1 -->
-        <div class="slide">
-            <h2>❓ 常见问题 FAQ</h2>
+            <h2 style="margin-top: 50px;">❓ 常见问题 FAQ</h2>
             
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q1: 如果答辩没通过怎么办？</h4>
-                <p><strong>A:</strong> 标准套餐及以上，我们承诺答辩通过。万一没通过，我们会免费继续指导您直到通过（最多延长2个月）。</p>
-            </div>
+            <div class="grid-2" style="margin-top: 20px;">
+                <div class="card">
+                    <h4>Q1: 如果答辩没通过怎么办？</h4>
+                    <p><strong>A:</strong> 标准套餐及以上，我们承诺答辩通过。万一没通过，我们会免费继续指导您直到通过（最多延长2个月）。</p>
+                </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q2: 导师靠谱吗？</h4>
-                <p><strong>A:</strong> 我们的导师都是5年以上开发经验的专业人士，经过严格筛选和培训。每次服务后您可以评分，满意度低的导师会被淘汰。</p>
-            </div>
+                <div class="card">
+                    <h4>Q2: 导师靠谱吗？</h4>
+                    <p><strong>A:</strong> 我们的导师都是5年以上开发经验的专业人士，经过严格筛选和培训。每次服务后您可以评分，满意度低的导师会被淘汰。</p>
+                </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q3: 服务周期能延长吗？</h4>
-                <p><strong>A:</strong> 可以。如果遇到特殊情况（如学校延期答辩），可以申请服务周期延长。</p>
-            </div>
+                <div class="card">
+                    <h4>Q3: 服务周期能延长吗？</h4>
+                    <p><strong>A:</strong> 可以。如果遇到特殊情况（如学校延期答辩），可以申请服务周期延长。</p>
+                </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q4: 支持哪些技术栈？</h4>
-                <p><strong>A:</strong> 我们支持主流的Web、移动、AI、大数据、游戏开发等方向。具体技术栈请咨询客服确认。</p>
-            </div>
+                <div class="card">
+                    <h4>Q4: 支持哪些技术栈？</h4>
+                    <p><strong>A:</strong> 我们支持主流的Web、移动、AI、大数据、游戏开发等方向。具体技术栈请咨询客服确认。</p>
+                </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q5: 可以先试听吗？</h4>
-                <p><strong>A:</strong> 可以。首次咨询免费（30分钟），您可以和导师沟通项目，了解我们的服务。</p>
-            </div>
+                <div class="card">
+                    <h4>Q5: 可以先试听吗？</h4>
+                    <p><strong>A:</strong> 可以。首次咨询免费（30分钟），您可以和导师沟通项目，了解我们的服务。</p>
+                </div>
 
-            <div class="card" style="margin-bottom: 20px;">
-                <h4>Q6: 项目代码会被其他人使用吗？</h4>
-                <p><strong>A:</strong> 绝对不会。我们签订保密协议，您的代码和论文严格保密，不会用于其他学员或商业用途。</p>
-            </div>
+                <div class="card">
+                    <h4>Q6: 项目代码会被其他人使用吗？</h4>
+                    <p><strong>A:</strong> 绝对不会。我们签订保密协议，您的代码和论文严格保密，不会用于其他学员或商业用途。</p>
+                </div>
 
-            <div class="card">
-                <h4>Q7: 价格可以优惠吗？</h4>
-                <p><strong>A:</strong> 我们有多种优惠方式：早鸟价、团购、全款优惠、推荐奖励等。建议组团报名，最划算。</p>
+                <div class="card">
+                    <h4>Q7: 价格可以优惠吗？</h4>
+                    <p><strong>A:</strong> 我们有多种优惠方式：早鸟价、团购、全款优惠、推荐奖励等。建议组团报名，最划算。</p>
+                </div>
             </div>
         </div>
 
-        <!-- 立即行动 -->
+        <!-- 立即行动 + 结束页 -->
         <div class="slide">
             <h2>🎯 立即行动</h2>
-            <p style="font-size: 28px; text-align: center; margin-bottom: 40px; color: #e74c3c; font-weight: bold;">早报名，早安心！</p>
+            <p style="font-size: 24px; text-align: center; margin-bottom: 30px; color: #e74c3c; font-weight: bold;">早报名，早安心！</p>
             
-            <div class="grid-3" style="margin-bottom: 40px;">
+            <div class="grid-3" style="margin-bottom: 30px;">
                 <div class="card center" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
                     <h3 style="color: white;">💰 早鸟特惠</h3>
-                    <p style="color: white; font-size: 20px; margin-top: 20px;">限时优惠中<br>现在报名享受早鸟价<br><strong style="font-size: 28px;">最高可省¥100</strong></p>
+                    <p style="color: white; font-size: 18px; margin-top: 15px;">限时优惠中<br>现在报名享受早鸟价<br><strong style="font-size: 24px;">最高可省¥100</strong></p>
                 </div>
                 <div class="card center" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
                     <h3 style="color: white;">🎁 新客礼包</h3>
-                    <p style="color: white; font-size: 20px; margin-top: 20px;">首次报名专享<br>免费试听+资料礼包<br><strong style="font-size: 28px;">技术评估</strong></p>
+                    <p style="color: white; font-size: 18px; margin-top: 15px;">首次报名专享<br>免费试听+资料礼包<br><strong style="font-size: 24px;">技术评估</strong></p>
                 </div>
                 <div class="card center" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
                     <h3 style="color: white;">👥 团购更优惠</h3>
-                    <p style="color: white; font-size: 20px; margin-top: 20px;">邀请好友一起<br>3人团减¥50/人<br><strong style="font-size: 28px;">5人团减¥60/人</strong></p>
+                    <p style="color: white; font-size: 18px; margin-top: 15px;">邀请好友一起<br>3人团减¥50/人<br><strong style="font-size: 24px;">5人团减¥60/人</strong></p>
                 </div>
             </div>
 
-            <div class="highlight" style="padding: 50px;">
-                <h1 style="font-size: 56px; margin-bottom: 30px;">⚠️ 重要提醒</h1>
-                <p style="font-size: 32px; margin-bottom: 20px;">越早准备，时间越充裕，效果越好！</p>
-                <p style="font-size: 24px;">不要等到最后一刻才想起毕业设计</p>
+            <div class="highlight" style="padding: 35px 40px; margin-bottom: 30px;">
+                <h3 style="font-size: 36px; margin-bottom: 20px; text-align: center;">⚠️ 重要提醒</h3>
+                <p style="font-size: 26px; margin-bottom: 15px; text-align: center;">越早准备，时间越充裕，效果越好！</p>
+                <p style="font-size: 20px; text-align: center;">不要等到最后一刻才想起毕业设计</p>
             </div>
-        </div>
 
-        <!-- 结束页 -->
-        <div class="slide">
-            <div class="highlight" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <h1 style="font-size: 64px; margin-bottom: 40px;">Thank You</h1>
-                <h2 style="font-size: 40px; margin-bottom: 30px;">期待与您合作</h2>
-                <div style="margin-top: 40px; font-size: 28px; text-align: center;">
-                    <p style="margin-bottom: 20px;">让我们一起</p>
-                    <p style="margin-bottom: 20px;">让毕业设计不再是压力</p>
-                    <p style="font-size: 36px; font-weight: bold;">而是展示能力的舞台</p>
+            <div style="text-align: center; margin-top: 35px;">
+                <h2 style="font-size: 48px; margin-bottom: 25px; color: #667eea; border: none;">Thank You</h2>
+                <p style="font-size: 28px; color: #764ba2; font-weight: bold; margin-bottom: 25px;">期待与您合作</p>
+                <div style="font-size: 20px; color: #666; margin-bottom: 30px;">
+                    <p style="margin-bottom: 12px;">让我们一起，让毕业设计不再是压力</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #667eea;">而是展示能力的舞台</p>
                 </div>
-                <div style="display: flex; gap: 30px; margin-top: 60px; justify-content: center; align-items: stretch;">
-                    <div onclick="copyQQ()" style="flex: 1; max-width: 350px; padding: 30px; background: white; border-radius: 20px; cursor: pointer; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        <img src="素材/index/QQ图标.png" alt="QQ" style="width: 80px; height: 80px; margin-bottom: 15px;">
-                        <p style="font-size: 24px; color: #667eea; margin-bottom: 10px;">QQ咨询</p>
-                        <p style="font-size: 32px; color: #764ba2; font-weight: bold; letter-spacing: 2px;">450029784</p>
-                        <p style="font-size: 18px; color: #999; margin-top: 10px;">点击复制QQ号，立即咨询</p>
-                    </div>
-                    <div style="flex: 1; max-width: 350px; padding: 25px; background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 24px; color: #667eea; margin-bottom: 15px; text-align: center;">💡 温馨提示</h3>
-                        <p style="font-size: 16px; color: #333; line-height: 1.6; text-align: center; margin-bottom: 12px; white-space: nowrap;">首次咨询请准备好以下信息：</p>
-                        <p style="font-size: 18px; color: #666; line-height: 2; text-align: center;">您的专业和年级<br>毕设的大致方向<br>目前的技术基础<br>学校的答辩时间</p>
-                    </div>
+            </div>
+
+            <div style="display: flex; gap: 25px; justify-content: center; align-items: stretch;">
+                <div onclick="copyQQ()" style="flex: 1; max-width: 320px; padding: 25px; background: white; border-radius: 15px; cursor: pointer; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    <img src="素材/index/QQ图标.png" alt="QQ" style="width: 70px; height: 70px; margin-bottom: 12px;">
+                    <p style="font-size: 20px; color: #667eea; margin-bottom: 8px;">QQ咨询</p>
+                    <p style="font-size: 28px; color: #764ba2; font-weight: bold; letter-spacing: 2px;">450029784</p>
+                    <p style="font-size: 16px; color: #999; margin-top: 8px;">点击复制QQ号，立即咨询</p>
+                </div>
+                <div style="flex: 1; max-width: 320px; padding: 25px; background: rgba(255, 255, 255, 0.95); border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 20px; color: #667eea; margin-bottom: 12px; text-align: center;">💡 温馨提示</h3>
+                    <p style="font-size: 14px; color: #333; line-height: 1.6; text-align: center; margin-bottom: 10px; white-space: nowrap;">首次咨询请准备好以下信息：</p>
+                    <p style="font-size: 16px; color: #666; line-height: 1.8; text-align: center;">您的专业和年级<br>毕设的大致方向<br>目前的技术基础<br>学校的答辩时间</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="slide-number">
-        <span id="current">1</span> / <span id="total">9</span>
+        <span id="current">1</span> / <span id="total">7</span>
     </div>
 
     <div style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(102, 126, 234, 0.9); color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; z-index: 999;">
@@ -890,6 +913,10 @@
             currentSlide = (n + totalSlides) % totalSlides;
             slides[currentSlide].classList.add('active');
             document.getElementById('current').textContent = currentSlide + 1;
+        }
+
+        function jumpToSlide(n) {
+            showSlide(n);
         }
 
         function nextSlide() {

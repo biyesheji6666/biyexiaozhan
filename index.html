@@ -29,40 +29,40 @@
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 42px;
+            margin-bottom: 12px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .header p {
-            font-size: 20px;
+            font-size: 18px;
             opacity: 0.95;
         }
 
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-bottom: 25px;
         }
 
         .device-selector {
             background: white;
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 40px;
+            padding: 25px 20px;
+            margin-bottom: 25px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .device-selector h3 {
             color: #667eea;
-            margin-bottom: 15px;
-            font-size: 22px;
+            margin-bottom: 10px;
+            font-size: 20px;
         }
 
         .device-buttons {
@@ -73,17 +73,17 @@
         }
 
         .device-btn {
-            padding: 15px 35px;
+            padding: 12px 30px;
             border-radius: 10px;
-            border: 3px solid #667eea;
+            border: 2px solid #667eea;
             background: white;
             color: #667eea;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             transition: all 0.3s;
-            min-width: 180px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 170px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .device-btn:hover {
@@ -100,31 +100,37 @@
 
         @media (max-width: 768px) {
             .device-selector {
-                padding: 25px 15px;
+                padding: 20px 15px;
             }
 
             .device-selector h3 {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 8px;
             }
 
             .device-buttons {
                 flex-direction: column;
-                gap: 12px;
+                gap: 10px;
             }
 
             .device-btn {
                 width: 100%;
                 min-width: auto;
-                padding: 18px 20px;
-                font-size: 17px;
+                padding: 12px 20px;
+                font-size: 15px;
             }
 
             .header h1 {
-                font-size: 28px;
+                font-size: 26px;
+                margin-bottom: 10px;
             }
 
             .header p {
-                font-size: 16px;
+                font-size: 15px;
+            }
+
+            .header {
+                margin-bottom: 20px;
             }
 
             .cards {
@@ -132,11 +138,15 @@
             }
 
             .card {
-                padding: 25px;
+                padding: 20px;
             }
 
             .card h2 {
                 font-size: 22px;
+            }
+
+            .card-icon {
+                font-size: 48px;
             }
         }
 
@@ -165,41 +175,41 @@
 
         .card {
             background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
         }
 
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
         }
 
         .card-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
+            font-size: 56px;
+            margin-bottom: 15px;
             text-align: center;
         }
 
         .card h2 {
             color: #667eea;
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 28px;
+            margin-bottom: 12px;
             text-align: center;
         }
 
         .card p {
             color: #666;
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .card .features {
-            margin: 20px 0;
-            padding: 20px;
+            margin: 15px 0;
+            padding: 15px 18px;
             background: #f5f7fa;
             border-radius: 10px;
         }
@@ -207,12 +217,13 @@
         .card .features ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .card .features li {
-            padding: 8px 0;
+            padding: 6px 0;
             color: #555;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .card .features li:before {
@@ -225,18 +236,19 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 18px 30px;
-            border-radius: 12px;
+            padding: 15px 25px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin-top: 5px;
         }
 
         .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
 
         .card.business h2 {
@@ -255,32 +267,15 @@
         .footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
+            margin-top: 25px;
             opacity: 0.9;
         }
 
         .footer p {
-            font-size: 16px;
-            margin: 10px 0;
+            font-size: 14px;
+            margin: 5px 0;
         }
 
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
-            }
-            
-            .cards {
-                grid-template-columns: 1fr;
-            }
-            
-            .card {
-                padding: 30px;
-            }
-            
-            .card h2 {
-                font-size: 24px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -292,14 +287,14 @@
 
         <div class="device-selector">
             <h3>📱 选择您的设备类型</h3>
-            <p style="color: #666; margin-bottom: 20px; font-size: 15px;">为您提供最佳浏览体验</p>
+            <p style="color: #666; margin-bottom: 15px; font-size: 14px;">为您提供最佳浏览体验</p>
             <div class="device-buttons">
                 <button class="device-btn" id="mobile-btn" onclick="showMobile()">
-                    <div style="font-size: 28px; margin-bottom: 5px;">📱</div>
+                    <div style="font-size: 24px; margin-bottom: 4px;">📱</div>
                     手机端（移动版）
                 </button>
                 <button class="device-btn" id="desktop-btn" onclick="showDesktop()">
-                    <div style="font-size: 28px; margin-bottom: 5px;">🖥️</div>
+                    <div style="font-size: 24px; margin-bottom: 4px;">🖥️</div>
                     电脑端（桌面版）
                 </button>
             </div>
@@ -307,7 +302,7 @@
 
         <div class="cards" id="desktop-cards">
             <!-- 客户版卡片 -->
-            <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <div class="card" style="max-width: 550px; margin: 0 auto;">
                 <div class="card-icon">🎓</div>
                 <h2>了解服务</h2>
                 <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
@@ -330,7 +325,7 @@
 
         <div class="cards" id="mobile-cards" style="display: none;">
             <!-- 客户版卡片 - 手机版 -->
-            <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <div class="card" style="max-width: 550px; margin: 0 auto;">
                 <div class="card-icon">🎓</div>
                 <h2>了解服务</h2>
                 <p>面向学生的服务介绍，展示我们如何帮助您顺利完成毕业设计</p>
