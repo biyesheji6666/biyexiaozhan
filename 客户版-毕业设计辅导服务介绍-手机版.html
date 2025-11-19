@@ -298,19 +298,88 @@
         .action-button:active {
             transform: scale(0.98);
         }
+
+        /* 导航菜单样式 */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(102, 126, 234, 0.98);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-toggle {
+            padding: 15px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(118, 75, 162, 0.98);
+        }
+
+        .nav-links.active {
+            max-height: 400px;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .nav-links a:active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .mobile-container {
+            padding-top: 55px;
+        }
     </style>
 </head>
 <body>
+    <!-- 导航菜单 -->
+    <div class="nav-menu">
+        <div class="nav-toggle" onclick="toggleNav()">
+            <span>📋 快速导航</span>
+            <span id="nav-icon">▼</span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#cover" onclick="closeNav()">🏠 首页</a>
+            <a href="#about" onclick="closeNav()">🎯 关于我们</a>
+            <a href="#guarantee" onclick="closeNav()">🏅 服务保障</a>
+            <a href="#problems" onclick="closeNav()">😰 学员痛点</a>
+            <a href="#tech" onclick="closeNav()">🔧 技术方向</a>
+            <a href="#packages" onclick="closeNav()">💎 服务套餐</a>
+            <a href="#faq" onclick="closeNav()">❓ 常见问题</a>
+            <a href="#action" onclick="closeNav()">🎯 立即行动</a>
+        </div>
+    </div>
+
     <div class="mobile-container">
         <!-- 封面 -->
-        <div class="section highlight">
+        <div class="section highlight" id="cover">
             <h1 style="font-size: 32px; margin-bottom: 20px;">🏠 毕设小站<br><span style="font-size: 28px;">毕业设计辅导服务</span></h1>
             <p class="subtitle" style="font-size: 20px; margin-bottom: 25px;">让您的毕业设计无忧通关</p>
             <p style="font-size: 18px; text-align: center;">专业 · 高效 · 保障</p>
         </div>
 
         <!-- 关于我们 -->
-        <div class="section">
+        <div class="section" id="about">
             <h2>🎯 关于我们</h2>
             
             <div class="card">
@@ -364,7 +433,7 @@
         </div>
 
         <!-- 服务保障 -->
-        <div class="section">
+        <div class="section" id="guarantee">
             <h2>🏅 服务保障</h2>
             
             <div class="card">
@@ -404,7 +473,7 @@
         </div>
 
         <!-- 学员痛点 -->
-        <div class="section">
+        <div class="section" id="problems">
             <h2>😰 学员痛点，我们都懂</h2>
             <p class="center" style="font-size: 16px; margin-bottom: 20px;">您是否遇到这些困扰？</p>
             
@@ -452,7 +521,7 @@
         </div>
 
         <!-- 技术方向 -->
-        <div class="section">
+        <div class="section" id="tech">
             <h2>🔧 我们支持的技术方向</h2>
             
             <div class="card">
@@ -482,7 +551,7 @@
         </div>
 
         <!-- 服务套餐 -->
-        <div class="section">
+        <div class="section" id="packages">
             <h2>💎 服务套餐</h2>
             
             <!-- 基础套餐 -->
@@ -788,7 +857,7 @@
         </div>
 
         <!-- 常见问题 -->
-        <div class="section">
+        <div class="section" id="faq">
             <h2>❓ 常见问题 FAQ</h2>
             
             <div class="card">
@@ -828,7 +897,7 @@
         </div>
 
         <!-- 立即行动 -->
-        <div class="section">
+        <div class="section" id="action">
             <h2>🎯 立即行动</h2>
             <p class="center" style="font-size: 20px; color: #e74c3c; font-weight: bold; margin-bottom: 30px;">早报名，早安心！</p>
             
@@ -889,6 +958,27 @@
     </div>
 
     <script>
+        // 导航菜单控制
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            const navIcon = document.getElementById('nav-icon');
+            
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navIcon.textContent = '▼';
+            } else {
+                navLinks.classList.add('active');
+                navIcon.textContent = '▲';
+            }
+        }
+
+        function closeNav() {
+            const navLinks = document.getElementById('navLinks');
+            const navIcon = document.getElementById('nav-icon');
+            navLinks.classList.remove('active');
+            navIcon.textContent = '▼';
+        }
+
         // 复制QQ号
         function copyQQ() {
             const qqNumber = '450029784';
