@@ -543,42 +543,73 @@
         <!-- 服务保障 -->
         <div class="section" id="guarantee">
             <h2>🏅 服务保障</h2>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #666; margin: 0;">👈 左右滑动查看更多保障 👉</p>
+            </div>
             
-            <div class="card">
-                <h3>✅ 质量保障</h3>
-                <ul>
-                    <li>导师资质：5年+经验</li>
-                    <li>答辩通过：标准套餐及以上承诺</li>
-                    <li>未通过：免费继续辅导2个月</li>
-                </ul>
-            </div>
+            <!-- 服务保障滑动容器 -->
+            <div class="packages-slider-wrapper">
+                <div class="packages-slider" id="guaranteeSlider">
+                    
+                    <!-- 质量保障 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 4px solid #4caf50;">
+                            <h3 style="color: #2e7d32; text-align: center;">✅ 质量保障</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>导师资质：5年+经验</li>
+                                <li>答辩通过：标准套餐及以上承诺</li>
+                                <li>未通过：免费继续辅导2个月</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>✅ 隐私保护</h3>
-                <ul>
-                    <li>代码严格保密</li>
-                    <li>论文保密：不用于其他用途</li>
-                    <li>信息安全：个人信息保护</li>
-                </ul>
-            </div>
+                    <!-- 隐私保护 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 4px solid #2196f3;">
+                            <h3 style="color: #1565c0; text-align: center;">✅ 隐私保护</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>代码严格保密</li>
+                                <li>论文保密：不用于其他用途</li>
+                                <li>信息安全：个人信息保护</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>✅ 服务保障</h3>
-                <ul>
-                    <li>响应及时：最快12小时内响应</li>
-                    <li>延期支持：特殊情况可延期</li>
-                </ul>
-            </div>
+                    <!-- 服务保障 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 4px solid #ff9800;">
+                            <h3 style="color: #e65100; text-align: center;">✅ 服务保障</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>响应及时：最快12小时内响应</li>
+                                <li>延期支持：特殊情况可延期</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>✅ 资料支持</h3>
-                <ul>
-                    <li>项目相关所有完整代码</li>
-                    <li>技术文档、海量资料</li>
-                    <li>文字、语音、视频辅导</li>
-                </ul>
+                    <!-- 资料支持 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0;">
+                            <h3 style="color: #6a1b9a; text-align: center;">✅ 资料支持</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>项目相关所有完整代码</li>
+                                <li>技术文档、海量资料</li>
+                                <li>文字、语音、视频辅导</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 滑动指示器 -->
+                <div class="slider-dots" id="guaranteeDots">
+                    <div class="slider-dot active" onclick="scrollToGuarantee(0)"></div>
+                    <div class="slider-dot" onclick="scrollToGuarantee(1)"></div>
+                    <div class="slider-dot" onclick="scrollToGuarantee(2)"></div>
+                    <div class="slider-dot" onclick="scrollToGuarantee(3)"></div>
+                </div>
             </div>
         </div>
+
 
         <!-- 学员痛点 -->
         <div class="section" id="problems">
@@ -586,79 +617,149 @@
             <div style="text-align: center; margin-bottom: 25px; padding: 15px; background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%); border-radius: 12px;">
                 <p style="font-size: 22px; font-weight: bold; color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); margin: 0;">❓ 您是否遇到这些困扰？ ❓</p>
             </div>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #666; margin: 0;">👈 左右滑动查看更多痛点 👉</p>
+            </div>
             
-            <div class="card">
-                <h3>❌ 技术问题</h3>
-                <ul>
-                    <li>技术栈不知如何选择</li>
-                    <li>代码写不出来，Bug调不好</li>
-                    <li>系统架构不会设计</li>
-                    <li>数据库表结构混乱</li>
-                </ul>
-            </div>
+            <!-- 学员痛点滑动容器 -->
+            <div class="packages-slider-wrapper">
+                <div class="packages-slider" id="problemsSlider">
+                    
+                    <!-- 技术问题 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); border-left: 4px solid #e74c3c;">
+                            <h3 style="color: #c62828; text-align: center;">❌ 技术问题</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>技术栈不知如何选择</li>
+                                <li>代码写不出来，Bug调不好</li>
+                                <li>系统架构不会设计</li>
+                                <li>数据库表结构混乱</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>❌ 论文问题</h3>
-                <ul>
-                    <li>论文不知从何写起</li>
-                    <li>格式总是不符合要求</li>
-                    <li>查重率过高</li>
-                    <li>内容空洞缺乏深度</li>
-                </ul>
-            </div>
+                    <!-- 论文问题 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 4px solid #ff9800;">
+                            <h3 style="color: #e65100; text-align: center;">❌ 论文问题</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>论文不知从何写起</li>
+                                <li>格式总是不符合要求</li>
+                                <li>查重率过高</li>
+                                <li>内容空洞缺乏深度</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>❌ 答辩问题</h3>
-                <ul>
-                    <li>答辩PPT不会做</li>
-                    <li>不知道老师会问什么</li>
-                    <li>演讲紧张说不清楚</li>
-                    <li>担心无法通过</li>
-                </ul>
-            </div>
+                    <!-- 答辩问题 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0;">
+                            <h3 style="color: #6a1b9a; text-align: center;">❌ 答辩问题</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>答辩PPT不会做</li>
+                                <li>不知道老师会问什么</li>
+                                <li>演讲紧张说不清楚</li>
+                                <li>担心无法通过</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>❌ 项目问题</h3>
-                <ul>
-                    <li>不知道做什么项目好</li>
-                    <li>功能太多无从下手</li>
-                    <li>项目进度严重拖延</li>
-                    <li>部署上线问题多</li>
-                </ul>
+                    <!-- 项目问题 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 4px solid #2196f3;">
+                            <h3 style="color: #1565c0; text-align: center;">❌ 项目问题</h3>
+                            <ul style="font-size: 15px; line-height: 2; color: #333;">
+                                <li>不知道做什么项目好</li>
+                                <li>功能太多无从下手</li>
+                                <li>项目进度严重拖延</li>
+                                <li>部署上线问题多</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 滑动指示器 -->
+                <div class="slider-dots" id="problemsDots">
+                    <div class="slider-dot active" onclick="scrollToProblems(0)"></div>
+                    <div class="slider-dot" onclick="scrollToProblems(1)"></div>
+                    <div class="slider-dot" onclick="scrollToProblems(2)"></div>
+                    <div class="slider-dot" onclick="scrollToProblems(3)"></div>
+                </div>
             </div>
 
             <p class="center" style="font-size: 18px; color: #27ae60; font-weight: bold; margin-top: 20px;">✅ 别担心，我们来帮您解决！</p>
         </div>
 
+
         <!-- 技术方向 -->
         <div class="section" id="tech">
             <h2>🔧 我们支持的技术方向</h2>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #666; margin: 0;">👈 左右滑动查看更多技术方向 👉</p>
+            </div>
             
-            <div class="card">
-                <h3>🌐 Web开发方向</h3>
-                <p><strong>前端：</strong>React / Vue / Angular / TypeScript</p>
-                <p><strong>后端：</strong>Spring Boot / Node.js / Django</p>
-                <p><strong>适用项目：</strong>管理系统、电商平台、社交网站</p>
-            </div>
+            <!-- 技术方向滑动容器 -->
+            <div class="packages-slider-wrapper">
+                <div class="packages-slider" id="techSlider">
+                    
+                    <!-- Web开发方向 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-left: 4px solid #667eea;">
+                            <h3 style="color: #3f51b5; text-align: center;">🌐 Web开发方向</h3>
+                            <div style="font-size: 15px; line-height: 2; color: #333;">
+                                <p><strong>前端：</strong>React / Vue / Angular / TypeScript</p>
+                                <p><strong>后端：</strong>Spring Boot / Node.js / Django</p>
+                                <p><strong>适用项目：</strong>管理系统、电商平台、社交网站</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>📱 移动应用开发</h3>
-                <p><strong>技术栈：</strong>Android / iOS / Flutter / React Native</p>
-                <p><strong>适用项目：</strong>移动APP、混合应用、小程序</p>
-            </div>
+                    <!-- 移动应用开发 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border-left: 4px solid #26a69a;">
+                            <h3 style="color: #00897b; text-align: center;">📱 移动应用开发</h3>
+                            <div style="font-size: 15px; line-height: 2; color: #333;">
+                                <p><strong>技术栈：</strong>Android / iOS / Flutter / React Native</p>
+                                <p><strong>适用项目：</strong>移动APP、混合应用、小程序</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>🤖 人工智能/机器学习</h3>
-                <p><strong>技术栈：</strong>Python / TensorFlow / PyTorch</p>
-                <p><strong>适用项目：</strong>图像识别、NLP、推荐系统</p>
-            </div>
+                    <!-- 人工智能/机器学习 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 4px solid #ff9800;">
+                            <h3 style="color: #e65100; text-align: center;">🤖 人工智能/机器学习</h3>
+                            <div style="font-size: 15px; line-height: 2; color: #333;">
+                                <p><strong>技术栈：</strong>Python / TensorFlow / PyTorch</p>
+                                <p><strong>适用项目：</strong>图像识别、NLP、推荐系统</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h3>🎮 游戏开发方向</h3>
-                <p><strong>技术栈：</strong>Unity3D / Unreal Engine / Cocos Creator</p>
-                <p><strong>适用项目：</strong>2D游戏 / 3D游戏 / 休闲小游戏</p>
+                    <!-- 游戏开发方向 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0;">
+                            <h3 style="color: #6a1b9a; text-align: center;">🎮 游戏开发方向</h3>
+                            <div style="font-size: 15px; line-height: 2; color: #333;">
+                                <p><strong>技术栈：</strong>Unity3D / Unreal Engine / Cocos Creator</p>
+                                <p><strong>适用项目：</strong>2D游戏 / 3D游戏 / 休闲小游戏</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 滑动指示器 -->
+                <div class="slider-dots" id="techDots">
+                    <div class="slider-dot active" onclick="scrollToTech(0)"></div>
+                    <div class="slider-dot" onclick="scrollToTech(1)"></div>
+                    <div class="slider-dot" onclick="scrollToTech(2)"></div>
+                    <div class="slider-dot" onclick="scrollToTech(3)"></div>
+                </div>
             </div>
         </div>
+
 
         <!-- 服务套餐 -->
         <div class="section" id="packages">
@@ -847,89 +948,113 @@
             <div style="text-align: center; margin-bottom: 20px; padding: 12px; background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border-radius: 8px; border: 2px solid #0288d1;">
                 <p style="font-size: 18px; font-weight: bold; color: #01579b; margin: 0;">📝 可单独购买的专项服务</p>
             </div>
-            
-            <div class="card" style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%); border-left: 4px solid #ff9800;">
-                <h3 style="color: #e65100; margin-bottom: 15px;">📋 材料撰写辅导</h3>
-                <p style="font-size: 15px; color: #555; margin-bottom: 15px;">除论文外的其他毕业设计相关材料撰写辅导服务</p>
-                
-                <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-                    <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">📄 包含内容</h4>
-                    <ul style="font-size: 14px; line-height: 1.8; color: #333;">
-                        <li>✅ 选题报告撰写辅导</li>
-                        <li>✅ 开题报告撰写辅导</li>
-                        <li>✅ 结题报告撰写辅导</li>
-                        <li>✅ 其他相关材料辅导</li>
-                    </ul>
-                </div>
-
-                <div style="background: #f1f8ff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
-                    <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">💰 价格说明</h4>
-                    <div style="display: grid; gap: 10px;">
-                        <div style="background: white; padding: 12px; border-radius: 6px; border-left: 3px solid #4caf50;">
-                            <p style="font-size: 15px; margin: 0;"><strong style="color: #4caf50;">全程辅导：</strong><span style="font-size: 20px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥200</span></p>
-                            <p style="font-size: 13px; color: #666; margin: 5px 0 0 0;">包含所有报告的完整辅导</p>
-                        </div>
-                        <div style="background: white; padding: 12px; border-radius: 6px; border-left: 3px solid #2196f3;">
-                            <p style="font-size: 15px; margin: 0;"><strong style="color: #2196f3;">单报告辅导：</strong><span style="font-size: 20px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥50/份</span></p>
-                            <p style="font-size: 13px; color: #666; margin: 5px 0 0 0;">单独购买某一份报告的辅导</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p style="font-size: 11px; color: #999; line-height: 1.6; margin: 0 0 15px 0; text-align: center;">
-                    * 需提供学校相关模板，根据具体要求完成撰写<br>
-                    * 如遇特别复杂或困难的要求，会视具体情况重新计价
-                </p>
-
-                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
-                    <p style="font-size: 14px; color: #01579b; margin: 0;">
-                        💬 <strong>如有更多需求详情，请与客服沟通</strong>
-                    </p>
-                </div>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #666; margin: 0;">👈 左右滑动查看更多服务 👉</p>
             </div>
-            <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0; margin-top: 20px;">
-                <h3 style="color: #6a1b9a; margin-bottom: 15px;">🔧 项目修改和完善服务</h3>
-                <p style="font-size: 15px; color: #555; margin-bottom: 15px;">已购买套餐的客户，如有新的需求变更或功能完善需要额外修改项目</p>
-                
-                <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-                    <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">🛠️ 服务说明</h4>
-                    <ul style="font-size: 14px; line-height: 1.8; color: #333;">
-                        <li>✅ 根据新需求修改项目功能</li>
-                        <li>✅ 完善现有项目功能模块</li>
-                        <li>✅ 优化项目代码结构</li>
-                        <li>✅ 添加新的功能特性</li>
-                    </ul>
-                </div>
+            
+            <!-- 额外服务滑动容器 -->
+            <div class="packages-slider-wrapper">
+                <div class="packages-slider" id="extraSlider">
+                    
+                    <!-- 材料撰写辅导 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%); border-left: 4px solid #ff9800;">
+                            <h3 style="color: #e65100; margin-bottom: 15px; text-align: center;">📋 材料撰写辅导</h3>
+                            <p style="font-size: 15px; color: #555; margin-bottom: 15px; text-align: center;">除论文外的其他毕业设计相关材料撰写辅导服务</p>
+                            
+                            <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                                <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">📄 包含内容</h4>
+                                <ul style="font-size: 14px; line-height: 1.8; color: #333;">
+                                    <li>✅ 选题报告撰写辅导</li>
+                                    <li>✅ 开题报告撰写辅导</li>
+                                    <li>✅ 结题报告撰写辅导</li>
+                                    <li>✅ 其他相关材料辅导</li>
+                                </ul>
+                            </div>
 
-                <div style="background: #fff8f0; padding: 15px; border-radius: 8px; margin-bottom: 12px; border: 2px dashed #ff9800;">
-                    <h4 style="color: #e65100; font-size: 16px; margin-bottom: 10px;">💰 价格说明</h4>
-                    <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #9c27b0;">
-                        <p style="font-size: 15px; margin: 0; color: #333; line-height: 1.8;">
-                            <strong style="color: #9c27b0;">灵活定价：</strong>
-                            <span style="font-size: 18px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥100 - ¥500/次</span>
-                        </p>
-                        <p style="font-size: 13px; color: #666; margin: 10px 0 0 0; line-height: 1.6;">
-                            根据需求的复杂程度和工作量评估具体价格：<br>
-                            • 简单修改（文字、样式调整等）：¥100-¥200<br>
-                            • 中等修改（功能优化、逻辑调整等）：¥200-¥350<br>
-                            • 复杂修改（新增模块、重构功能等）：¥350-¥500
-                        </p>
+                            <div style="background: #f1f8ff; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                                <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">💰 价格说明</h4>
+                                <div style="display: grid; gap: 10px;">
+                                    <div style="background: white; padding: 12px; border-radius: 6px; border-left: 3px solid #4caf50;">
+                                        <p style="font-size: 15px; margin: 0;"><strong style="color: #4caf50;">全程辅导：</strong><span style="font-size: 20px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥200</span></p>
+                                        <p style="font-size: 13px; color: #666; margin: 5px 0 0 0;">包含所有报告的完整辅导</p>
+                                    </div>
+                                    <div style="background: white; padding: 12px; border-radius: 6px; border-left: 3px solid #2196f3;">
+                                        <p style="font-size: 15px; margin: 0;"><strong style="color: #2196f3;">单报告辅导：</strong><span style="font-size: 20px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥50/份</span></p>
+                                        <p style="font-size: 13px; color: #666; margin: 5px 0 0 0;">单独购买某一份报告的辅导</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p style="font-size: 11px; color: #999; line-height: 1.6; margin: 0 0 15px 0; text-align: center;">
+                                * 需提供学校相关模板，根据具体要求完成撰写<br>
+                                * 如遇特别复杂或困难的要求，会视具体情况重新计价
+                            </p>
+
+                            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
+                                <p style="font-size: 14px; color: #01579b; margin: 0;">
+                                    💬 <strong>如有更多需求详情，请与客服沟通</strong>
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- 项目修改和完善服务 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0;">
+                            <h3 style="color: #6a1b9a; margin-bottom: 15px; text-align: center;">🔧 项目修改和完善服务</h3>
+                            <p style="font-size: 15px; color: #555; margin-bottom: 15px; text-align: center;">已购买套餐的客户，如有新的需求变更或功能完善需要额外修改项目</p>
+                            
+                            <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                                <h4 style="color: #0288d1; font-size: 16px; margin-bottom: 10px;">🛠️ 服务说明</h4>
+                                <ul style="font-size: 14px; line-height: 1.8; color: #333;">
+                                    <li>✅ 根据新需求修改项目功能</li>
+                                    <li>✅ 完善现有项目功能模块</li>
+                                    <li>✅ 优化项目代码结构</li>
+                                    <li>✅ 添加新的功能特性</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #fff8f0; padding: 15px; border-radius: 8px; margin-bottom: 12px; border: 2px dashed #ff9800;">
+                                <h4 style="color: #e65100; font-size: 16px; margin-bottom: 10px;">💰 价格说明</h4>
+                                <div style="background: white; padding: 15px; border-radius: 6px; border-left: 3px solid #9c27b0;">
+                                    <p style="font-size: 15px; margin: 0; color: #333; line-height: 1.8;">
+                                        <strong style="color: #9c27b0;">灵活定价：</strong>
+                                        <span style="font-size: 18px; color: #e74c3c; font-weight: bold; margin-left: 10px;">¥100 - ¥500/次</span>
+                                    </p>
+                                    <p style="font-size: 13px; color: #666; margin: 10px 0 0 0; line-height: 1.6;">
+                                        根据需求的复杂程度和工作量评估具体价格：<br>
+                                        • 简单修改（文字、样式调整等）：¥100-¥200<br>
+                                        • 中等修改（功能优化、逻辑调整等）：¥200-¥350<br>
+                                        • 复杂修改（新增模块、重构功能等）：¥350-¥500
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p style="font-size: 11px; color: #999; line-height: 1.6; margin: 0 0 15px 0; text-align: center;">
+                                * 套餐内赠送的修改次数用完后可购买此服务<br>
+                                * 具体价格需评估后确定，复杂需求可能需要额外报价<br>
+                                * 修改内容不得超出原项目范围过大，否则建议重新购买套餐
+                            </p>
+
+                            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
+                                <p style="font-size: 14px; color: #01579b; margin: 0;">
+                                    💬 <strong>请联系客服详细说明修改需求，我们将为您评估价格</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <p style="font-size: 11px; color: #999; line-height: 1.6; margin: 0 0 15px 0; text-align: center;">
-                    * 套餐内赠送的修改次数用完后可购买此服务<br>
-                    * 具体价格需评估后确定，复杂需求可能需要额外报价<br>
-                    * 修改内容不得超出原项目范围过大，否则建议重新购买套餐
-                </p>
-
-                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
-                    <p style="font-size: 14px; color: #01579b; margin: 0;">
-                        💬 <strong>请联系客服详细说明修改需求，我们将为您评估价格</strong>
-                    </p>
+                <!-- 滑动指示器 -->
+                <div class="slider-dots" id="extraDots">
+                    <div class="slider-dot active" onclick="scrollToExtra(0)"></div>
+                    <div class="slider-dot" onclick="scrollToExtra(1)"></div>
                 </div>
             </div>
         </div>
+
 
         <!-- 优惠活动 -->
         <div class="section" id="discount">
@@ -959,37 +1084,76 @@
         <!-- 常见问题 -->
         <div class="section" id="faq">
             <h2>❓ 常见问题 FAQ</h2>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 14px; color: #666; margin: 0;">👈 左右滑动查看更多问题 👉</p>
+            </div>
             
-            <div class="card" style="background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%); border: 2px solid #f5576c;">
-                <h4 style="color: #f5576c;">Q1: "免费构建项目雏形"是什么意思？<span class="highlight-tag" style="margin-left: 8px;">热门</span></h4>
-                <p><strong style="color: #f5576c;">A:</strong> 这是我们的核心优势！在您购买任何套餐之前，我们会根据您的需求<strong style="color: #f5576c;">免费创建一个项目雏形</strong>（包括基本框架和核心功能演示）。您可以先看到实际效果，觉得满意后再决定是否付款购买完整服务。这样您就不用担心付款后得不到想要的效果，完全<strong style="color: #f5576c;">零风险</strong>！</p>
-            </div>
+            <!-- 常见问题滑动容器 -->
+            <div class="packages-slider-wrapper">
+                <div class="packages-slider" id="faqSlider">
+                    
+                    <!-- Q1 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%); border-left: 4px solid #f5576c; border: 2px solid #f5576c;">
+                            <h4 style="color: #f5576c;">Q1: "免费构建项目雏形"是什么意思？<span class="highlight-tag" style="margin-left: 8px;">热门</span></h4>
+                            <p><strong style="color: #f5576c;">A:</strong> 这是我们的核心优势！在您购买任何套餐之前，我们会根据您的需求<strong style="color: #f5576c;">免费创建一个项目雏形</strong>（包括基本框架和核心功能演示）。您可以先看到实际效果，觉得满意后再决定是否付款购买完整服务。这样您就不用担心付款后得不到想要的效果，完全<strong style="color: #f5576c;">零风险</strong>！</p>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h4>Q2: 如果答辩没通过怎么办？</h4>
-                <p><strong>A:</strong> 标准套餐及以上，我们承诺答辩通过。万一没通过，我们会免费继续指导您直到通过（最多延长2个月）。</p>
-            </div>
+                    <!-- Q2 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-left: 4px solid #667eea;">
+                            <h4 style="color: #3f51b5;">Q2: 如果答辩没通过怎么办？</h4>
+                            <p style="color: #333;"><strong style="color: #3f51b5;">A:</strong> 标准套餐及以上，我们承诺答辩通过。万一没通过，我们会免费继续指导您直到通过（最多延长2个月）。</p>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h4>Q3: 导师靠谱吗？</h4>
-                <p><strong>A:</strong> 我们的导师都是5年以上开发经验的专业人士，经过严格筛选和培训。</p>
-            </div>
+                    <!-- Q3 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%); border-left: 4px solid #26a69a;">
+                            <h4 style="color: #00897b;">Q3: 导师靠谱吗？</h4>
+                            <p style="color: #333;"><strong style="color: #00897b;">A:</strong> 我们的导师都是5年以上开发经验的专业人士，经过严格筛选和培训。</p>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h4>Q4: 服务周期能延长吗？</h4>
-                <p><strong>A:</strong> 可以。如果遇到特殊情况（如学校延期答辩），可以申请服务周期延长。</p>
-            </div>
+                    <!-- Q4 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left: 4px solid #ff9800;">
+                            <h4 style="color: #e65100;">Q4: 服务周期能延长吗？</h4>
+                            <p style="color: #333;"><strong style="color: #e65100;">A:</strong> 可以。如果遇到特殊情况（如学校延期答辩），可以申请服务周期延长。</p>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h4>Q5: 支持哪些技术栈？</h4>
-                <p><strong>A:</strong> 我们支持主流的Web、移动、AI、大数据、游戏开发等方向。具体技术栈请咨询客服确认。</p>
-            </div>
+                    <!-- Q5 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border-left: 4px solid #9c27b0;">
+                            <h4 style="color: #6a1b9a;">Q5: 支持哪些技术栈？</h4>
+                            <p style="color: #333;"><strong style="color: #6a1b9a;">A:</strong> 我们支持主流的Web、移动、AI、大数据、游戏开发等方向。具体技术栈请咨询客服确认。</p>
+                        </div>
+                    </div>
 
-            <div class="card">
-                <h4>Q6: 项目代码会被其他人使用吗？</h4>
-                <p><strong>A:</strong> 绝对不会。您的代码和论文严格保密，不会用于其他学员或商业用途。</p>
+                    <!-- Q6 -->
+                    <div class="package-slide">
+                        <div class="card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 4px solid #2196f3;">
+                            <h4 style="color: #1565c0;">Q6: 项目代码会被其他人使用吗？</h4>
+                            <p style="color: #333;"><strong style="color: #1565c0;">A:</strong> 绝对不会。您的代码和论文严格保密，不会用于其他学员或商业用途。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 滑动指示器 -->
+                <div class="slider-dots" id="faqDots">
+                    <div class="slider-dot active" onclick="scrollToFaq(0)"></div>
+                    <div class="slider-dot" onclick="scrollToFaq(1)"></div>
+                    <div class="slider-dot" onclick="scrollToFaq(2)"></div>
+                    <div class="slider-dot" onclick="scrollToFaq(3)"></div>
+                    <div class="slider-dot" onclick="scrollToFaq(4)"></div>
+                    <div class="slider-dot" onclick="scrollToFaq(5)"></div>
+                </div>
             </div>
         </div>
+
 
         <!-- 结束页 -->
         <div class="section highlight">
@@ -1062,9 +1226,14 @@
             document.body.removeChild(tempInput);
         }
 
-        // 页面加载时初始化套餐滑动
+        // 页面加载时初始化所有滑动功能
         window.onload = function() {
             initPackagesSlider();
+            initGuaranteeSlider();
+            initProblemsSlider();
+            initTechSlider();
+            initExtraSlider();
+            initFaqSlider();
         };
 
         // 平滑滚动到顶部
@@ -1128,9 +1297,278 @@
                     dot.classList.remove('active');
                 }
             });
+
+        }
+        // 服务保障滑动功能
+        function initGuaranteeSlider() {
+            const slider = document.getElementById('guaranteeSlider');
+            if (!slider) return;
+
+            // 默认滚动到第一个（索引0）
+            scrollToGuarantee(0);
+
+            // 监听滚动事件，更新指示器
+            slider.addEventListener('scroll', function() {
+                updateGuaranteeDots();
+            });
+        }
+
+        // 滚动到指定服务保障
+        function scrollToGuarantee(index) {
+            const slider = document.getElementById('guaranteeSlider');
+            const slides = slider.querySelectorAll('.package-slide');
+            
+            if (slides[index]) {
+                const slideWidth = slides[index].offsetWidth;
+                const gap = 15; // gap between slides
+                const scrollPosition = index * (slideWidth + gap);
+                
+                slider.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            updateGuaranteeDots(index);
+        }
+
+        // 更新服务保障滑动指示器
+        function updateGuaranteeDots(activeIndex) {
+            const slider = document.getElementById('guaranteeSlider');
+            const dots = document.querySelectorAll('#guaranteeDots .slider-dot');
+            
+            // 如果没有传入索引，根据滚动位置计算当前索引
+            if (activeIndex === undefined) {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.querySelector('.package-slide').offsetWidth + 15; // 包括gap
+                activeIndex = Math.round(scrollLeft / slideWidth);
+            }
+            
+            // 更新指示器状态
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+        // 学员痛点滑动功能
+        function initProblemsSlider() {
+            const slider = document.getElementById('problemsSlider');
+            if (!slider) return;
+
+            // 默认滚动到第一个（索引0）
+            scrollToProblems(0);
+
+            // 监听滚动事件，更新指示器
+            slider.addEventListener('scroll', function() {
+                updateProblemsDots();
+            });
+        }
+
+        // 滚动到指定学员痛点
+        function scrollToProblems(index) {
+            const slider = document.getElementById('problemsSlider');
+            const slides = slider.querySelectorAll('.package-slide');
+            
+            if (slides[index]) {
+                const slideWidth = slides[index].offsetWidth;
+                const gap = 15; // gap between slides
+                const scrollPosition = index * (slideWidth + gap);
+                
+                slider.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            updateProblemsDots(index);
+        }
+
+        // 更新学员痛点滑动指示器
+        function updateProblemsDots(activeIndex) {
+            const slider = document.getElementById('problemsSlider');
+            const dots = document.querySelectorAll('#problemsDots .slider-dot');
+            
+            // 如果没有传入索引，根据滚动位置计算当前索引
+            if (activeIndex === undefined) {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.querySelector('.package-slide').offsetWidth + 15; // 包括gap
+                activeIndex = Math.round(scrollLeft / slideWidth);
+            }
+            
+            // 更新指示器状态
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+        // 技术方向滑动功能
+        function initTechSlider() {
+            const slider = document.getElementById('techSlider');
+            if (!slider) return;
+
+            // 默认滚动到第一个（索引0）
+            scrollToTech(0);
+
+            // 监听滚动事件，更新指示器
+            slider.addEventListener('scroll', function() {
+                updateTechDots();
+            });
+        }
+
+        // 滚动到指定技术方向
+        function scrollToTech(index) {
+            const slider = document.getElementById('techSlider');
+            const slides = slider.querySelectorAll('.package-slide');
+            
+            if (slides[index]) {
+                const slideWidth = slides[index].offsetWidth;
+                const gap = 15; // gap between slides
+                const scrollPosition = index * (slideWidth + gap);
+                
+                slider.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            updateTechDots(index);
+        }
+
+        // 更新技术方向滑动指示器
+        function updateTechDots(activeIndex) {
+            const slider = document.getElementById('techSlider');
+            const dots = document.querySelectorAll('#techDots .slider-dot');
+            
+            // 如果没有传入索引，根据滚动位置计算当前索引
+            if (activeIndex === undefined) {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.querySelector('.package-slide').offsetWidth + 15; // 包括gap
+                activeIndex = Math.round(scrollLeft / slideWidth);
+            }
+            
+            // 更新指示器状态
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+        // 额外服务滑动功能
+        function initExtraSlider() {
+            const slider = document.getElementById('extraSlider');
+            if (!slider) return;
+
+            // 默认滚动到第一个（索引0）
+            scrollToExtra(0);
+
+            // 监听滚动事件，更新指示器
+            slider.addEventListener('scroll', function() {
+                updateExtraDots();
+            });
+        }
+
+        // 滚动到指定额外服务
+        function scrollToExtra(index) {
+            const slider = document.getElementById('extraSlider');
+            const slides = slider.querySelectorAll('.package-slide');
+            
+            if (slides[index]) {
+                const slideWidth = slides[index].offsetWidth;
+                const gap = 15; // gap between slides
+                const scrollPosition = index * (slideWidth + gap);
+                
+                slider.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            updateExtraDots(index);
+        }
+
+        // 更新额外服务滑动指示器
+        function updateExtraDots(activeIndex) {
+            const slider = document.getElementById('extraSlider');
+            const dots = document.querySelectorAll('#extraDots .slider-dot');
+            
+            // 如果没有传入索引，根据滚动位置计算当前索引
+            if (activeIndex === undefined) {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.querySelector('.package-slide').offsetWidth + 15; // 包括gap
+                activeIndex = Math.round(scrollLeft / slideWidth);
+            }
+            
+            // 更新指示器状态
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+        // 常见问题滑动功能
+        function initFaqSlider() {
+            const slider = document.getElementById('faqSlider');
+            if (!slider) return;
+
+            // 默认滚动到第一个（索引0）
+            scrollToFaq(0);
+
+            // 监听滚动事件，更新指示器
+            slider.addEventListener('scroll', function() {
+                updateFaqDots();
+            });
+        }
+
+        // 滚动到指定问题
+        function scrollToFaq(index) {
+            const slider = document.getElementById('faqSlider');
+            const slides = slider.querySelectorAll('.package-slide');
+            
+            if (slides[index]) {
+                const slideWidth = slides[index].offsetWidth;
+                const gap = 15; // gap between slides
+                const scrollPosition = index * (slideWidth + gap);
+                
+                slider.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+            
+            updateFaqDots(index);
+        }
+
+        // 更新常见问题滑动指示器
+        function updateFaqDots(activeIndex) {
+            const slider = document.getElementById('faqSlider');
+            const dots = document.querySelectorAll('#faqDots .slider-dot');
+            
+            // 如果没有传入索引，根据滚动位置计算当前索引
+            if (activeIndex === undefined) {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.querySelector('.package-slide').offsetWidth + 15; // 包括gap
+                activeIndex = Math.round(scrollLeft / slideWidth);
+            }
+            
+            // 更新指示器状态
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
         }
     </script>
 </body>
 </html>
-
-
